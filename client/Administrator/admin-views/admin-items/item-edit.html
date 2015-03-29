@@ -1,0 +1,69 @@
+<template name = "ItemEditTemplate">
+    <form action="" method="POST" role="form">
+        <legend> Edit Item</legend>
+
+        <div class="form-group">
+            <label for="">Id</label>
+            <input type="text" class="form-control" name="" id="itemId" placeholder="Item Name" disabled>
+
+        </div>
+
+
+        <div class="form-group">
+            <label for="">Name</label>
+            <input type="text" class="form-control" name="" id="itemName" placeholder="Item Name">
+
+        </div>
+
+        <div class="form-group">
+            <label for="">Price</label>
+            <input type="text" class="form-control" name="" id="itemPrice" placeholder="Item Price">
+        </div>
+
+        <div class="form-group">
+            <label for="">Created At</label>
+            <input type="text" class="form-control" name="" id="itemCreated_at" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="">Created By</label>
+            <input type="text" class="form-control" name="" id="itemCreated_by" disabled>
+        </div>
+
+
+        <div class="form-group">
+            <label for="">Item Media</label>
+            <input type="text" class="form-control" name="" id="itemMediaId" disabled>
+            <button class="btn btn-primary" id = "addItemMedia"> Add Media</button>
+        </div>
+
+        <div class="form-group">
+            <label for="">Item Category</label>
+            <select name=""  class="select2-input select2-default" id="itemCategoryId">
+                {{#each categories}}
+                    <option value="{{_id}}">{{name}}</option>
+                {{/each}}
+            </select>
+
+
+
+            <br>
+
+      <!--      <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+
+
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"></a></li>
+
+                </ul>
+            </div>-->
+
+        </div>
+
+
+        <button type="submit" class="btn btn-primary" id = "editItem">Edit Item</button>
+    </form>
+
+</template>

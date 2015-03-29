@@ -1,0 +1,52 @@
+<!--This is the header section of the admin layout-->
+<template name = "adminHeaderTemplate">
+
+    <div class="my-header"></div>
+
+  <div class="myNav">
+  <div class="container">
+  	  <nav class="navbar navbar-default" role="navigation">
+  	  	<!-- Brand and toggle get grouped for better mobile display -->
+  	  	<div class="navbar-header">
+  	  		<a class="navbar-brand" href="#">Home</a>
+            {{#if currentUser}}
+                <a class="navbar-brand" href="#" id = "adminLogout">LogOut</a>
+            {{/if}}
+  	  	</div>
+  	  
+
+  	  </nav>
+  </div>
+  </div>
+</template>
+
+<template name = "adminBodyTemplate">
+  {{#if currentUser}}
+
+      {{> adminLoggedInTemplate}}
+
+      {{else}}
+       Login again It idnt login properly
+  {{/if}}
+</template>
+
+<template name = "adminFootTemplate">
+  <div class="my-footer">
+
+    <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <a href="#" class="">Contact Us</a>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        	About Us
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        	Blog
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        	Terms & Conditions
+        </div>
+    </div>
+
+  </div>
+</template>

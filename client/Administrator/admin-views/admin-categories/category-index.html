@@ -1,0 +1,33 @@
+<template name = "CategoryIndexTemplate">
+    <button class="btn btn-primary" id = "addCategory"> Add Category </button>
+
+    <hr/>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Created At</th>
+                <th>Created By</th>
+                <th>Edited At</th>
+                <th>Edited By</th>
+                <th>Edit?</th>
+            </tr>
+
+
+        </thead>
+        <tbody>
+            {{#each categories}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{created_at}}</td>
+                <td>{{created_by}}</td>
+                <td>{{edited_at}}</td>
+                <td>{{edited_by}}</td>
+                <td><button class="btn btn-info" id = "goToEditCategory">Edit</button></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+</template>

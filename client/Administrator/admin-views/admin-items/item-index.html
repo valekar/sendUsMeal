@@ -1,0 +1,47 @@
+<template name = "ItemIndexTemplate">
+    <div class="row">
+
+            <button class="btn btn-primary" id ="AddItem">Add Item</button>
+            <hr>
+
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Created at</th>
+                    <th>Created by</th>
+                    <th>Edited at</th>
+                    <th>Edited By</th>
+                    <th>Category Id</th>
+                    <th>Media Id</th>
+                    <th>Edit?</th>
+                    <th>Delete?</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                {{#each items}}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>{{price}}</td>
+                        <td> {{created_at}}</td>
+                        <td>{{created_by}}</td>
+                        <td>{{edited_at}}</td>
+                        <td>{{edited_by}}</td>
+                        <td>{{itemCategoryId}}</td>
+                        <td>{{itemMediaId}}</td>
+                        <td><button class="btn btn-sm btn-primary" id = "editItem">Edit me </button></td>
+                        <td><button class="btn btn-sm btn-danger" id = "deleteItem">Delete </button></td>
+                    </tr>
+                {{/each}}
+                <tr></tr>
+                </tbody>
+            </table>
+
+
+    </div>
+
+
+
+</template>

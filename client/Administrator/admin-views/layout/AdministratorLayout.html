@@ -1,0 +1,21 @@
+<template name = "AdministratorLayout">
+
+
+    <header>
+        <div class="container-fluid">
+            {{> yield "headerAdminSection"}}
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            {{> yield "bodyAdminSection"}}
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            {{> yield "footerAdminSection"}}
+        </div>
+    </footer>
+
+
+</template>

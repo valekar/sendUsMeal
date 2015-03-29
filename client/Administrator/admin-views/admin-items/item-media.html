@@ -1,0 +1,26 @@
+<template name = "ItemMediaTemplate">
+
+    <button class="btn btn-primary" id = "addItemMedia"> Add Item Media</button>
+
+    <div class="row">
+        {{#each medias}}
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 well well-lg">
+
+                <img src="{{url}}" alt="alt-text" class="img-responsive" />
+                <div class="checkbox">
+                    <label>
+                        <strong>{{_id}}</strong>
+                        <input type="radio" value="{{_id}}" id="addMedia" name="addItemMediaCheckbox">
+
+                    </label>
+                </div>
+            </div>
+            <div class="btn-separator">
+
+            </div>
+
+        {{/each}}
+
+    </div>
+
+</template>
