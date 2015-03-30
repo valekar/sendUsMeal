@@ -1,3 +1,4 @@
+/*FS media allow permission*/
 Medias.allow({
     insert:function(userId){
         //console.log(userId);
@@ -19,3 +20,5 @@ Medias.allow({
         return true;
     }
 })
+
+//remove functionality of the media has been added in admin-user.js

@@ -1,4 +1,5 @@
 // adding new item into the list
+/*Adding the food items*/
 Template.newItemTemplate.events({
    "click #createNewItem":function(event,templ){
        event.preventDefault();
@@ -32,10 +33,12 @@ Template.ItemIndexTemplate.events({
     },
 
     'click #editItem':function(event,templ){
-       // console.log(this);
+        /*Store the current instance in the EditingItem session variable*/
         Session.set("EditingItem",this);
+        /*Redirect to the next Edit template where you can edit the item*/
         Session.set("currentPage","ItemEditTemplate");
     },
+    /*Delete the current item from the list*/
     'click #deleteItem':function(event,templ){
         if(window.confirm("Are you sure?")){
             var attr = {
@@ -50,12 +53,10 @@ Template.ItemIndexTemplate.events({
                     });
                 }
         }
-        else {
-            //alert("cancelled");
-        }
     }
 });
 
+/*The events that happen in the edit template*/
 Template.ItemEditTemplate.events({
    'click #editItem':function(event,templ){
        event.preventDefault();
@@ -87,16 +88,19 @@ Template.ItemEditTemplate.events({
        }
 
    },
-
+    /*Interesting :: Add the media , this redirects to the item-media template where in you can choose the related the
+     pick for the item*/
     'click #addItemMedia':function(event,templ){
         event.preventDefault();
         //alert("media");
+        /*go to the media template to choose the media for the current item*/
         Session.set("currentPage","ItemMediaTemplate");
     }
 });
 
-
+/*the item-media.html page events*/
 Template.ItemMediaTemplate.events({
+    /*choose one of the items and then click the add media button */
    'click #addItemMedia':function(event,templ){
        var mediaId = $('input[name=addItemMediaCheckbox]:checked').val();
        if(mediaId.length<=0){
@@ -104,7 +108,9 @@ Template.ItemMediaTemplate.events({
        }
        else {
           // console.log(mediaId);
+           /*Store the currently selected media Id */
            Session.set("ItemMedia",mediaId);
+           /*Redirect to the editing page*/
            Session.set("currentPage","ItemEditTemplate");
        }
 

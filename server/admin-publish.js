@@ -1,3 +1,4 @@
+/*admin publishing items*/
 Meteor.publish('userCheck',function(){
     var fields ={};
     return Admin.find({},{_id:0});
@@ -11,6 +12,7 @@ Meteor.publish('Items',function(id){
 });
 
 Meteor.publish('Categories',function(id){
+    /*Check if the user is admin*/
     if(id === Meteor.users.findOne({profile:{admin:true}})._id){
         return Categories.find();
     }

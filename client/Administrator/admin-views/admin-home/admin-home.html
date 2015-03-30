@@ -9,8 +9,9 @@
   	  	<!-- Brand and toggle get grouped for better mobile display -->
   	  	<div class="navbar-header">
   	  		<a class="navbar-brand" href="#">Home</a>
+            <!--Show the log out button for the user when the user has been logged in-->
             {{#if currentUser}}
-                <a class="navbar-brand" href="#" id = "adminLogout">LogOut</a>
+                <a class="navbar-brand" href="#" id = "adminLogout">Logout</a>
             {{/if}}
   	  	</div>
   	  
@@ -22,11 +23,12 @@
 
 <template name = "adminBodyTemplate">
   {{#if currentUser}}
-
+        <!--Logged in template has been defined separately in order to not to make it cluttered-->
       {{> adminLoggedInTemplate}}
 
       {{else}}
-       Login again It idnt login properly
+      <!--Although this message is never showed,this is defined for the integrity purpose-->
+       Login again, You didn't login properly
   {{/if}}
 </template>
 

@@ -1,3 +1,4 @@
+<!--item-edit.html for editing the pages-->
 <template name = "ItemEditTemplate">
     <form action="" method="POST" role="form">
         <legend> Edit Item</legend>
@@ -34,9 +35,11 @@
         <div class="form-group">
             <label for="">Item Media</label>
             <input type="text" class="form-control" name="" id="itemMediaId" disabled>
+            <!--Add the media(photo id ) for the current item-->
             <button class="btn btn-primary" id = "addItemMedia"> Add Media</button>
         </div>
 
+        <!--Drop down list of categories-->
         <div class="form-group">
             <label for="">Item Category</label>
             <select name=""  class="select2-input select2-default" id="itemCategoryId">

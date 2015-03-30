@@ -1,3 +1,4 @@
+<!--Add new items (food) to the system-->
 <template name = "newItemTemplate">
     <form action="" method="POST" role="form">
     	<legend> New Item</legend>
@@ -14,6 +15,7 @@
 
         <div class="form-group">
             <label for=""></label>
+            <!--Show the categories to be related to the item-->
             <select name=""  class="select2-input select2-default" id="itemCategory">
                 {{#each categories}}
                     <option value="{{_id}}">{{name}}</option>

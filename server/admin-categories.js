@@ -1,5 +1,6 @@
 Meteor.methods({
     'insertCategory':function(attrs){
+        //check if the user is admin
         if(Meteor.users.findOne({profile:{admin:true}})._id===attrs.userId){
             Categories.insert({
                 name: attrs.name,

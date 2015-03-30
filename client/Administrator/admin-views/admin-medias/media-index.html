@@ -1,8 +1,12 @@
+<!--Media Index page for the photo-->
 <template name = "MediaIndexTemplate">
 
     <button class="btn btn-primary" id = "goToAddMedia" >Add Media</button>
 
+    <button class="btn btn-danger" id = "removeMedia">Remove Selected Media</button>
 
+    <br>
+    <br>
     <div class="row">
         {{#each medias}}
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 well well-lg">
@@ -11,7 +15,7 @@
                 <div class="checkbox">
                     <label>
                         <strong>{{_id}}</strong>
-                        <input type="radio" value="{{_id}}" id="removeCheckbox" name="removeCheckbox">
+                        <input type="radio" value="{{_id}}" id="removeCheckbox" name="ItemMediaCheckbox">
 
                     </label>
                 </div>

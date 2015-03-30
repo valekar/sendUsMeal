@@ -1,7 +1,8 @@
+/*This is the admin registration template, This is shown when the user first comes for the first time*/
 Template.AdminBodyRegistrationTemplate.events({
    'click #RegisterAdmin':function(event,templ){
        event.preventDefault();
-       alert("Hello");
+       //alert("Hello");
 
        if($("#confirmPassword").val() === $("#password").val())
        {
@@ -15,7 +16,7 @@ Template.AdminBodyRegistrationTemplate.events({
            //
            Meteor.call('addAdminUser',attrs,function(err,result){
                if(err){
-                   alert("sumthing went wrong " +err.reason);
+                   alert("something went wrong " +err.reason);
                }
                else if(result){
                    console.log(result);
@@ -28,7 +29,7 @@ Template.AdminBodyRegistrationTemplate.events({
 
    }
 });
-
+/*This is to handle the user(admin) login */
 Template.AdminBodyLoginTemplate.events({
     'click #adminLogin':function(e,templ) {
         e.preventDefault();
@@ -47,11 +48,12 @@ Template.AdminBodyLoginTemplate.events({
 
 });
 
+/*User logout*/
 Template.adminHeaderTemplate.events({
    "click #adminLogout":function(event,templ){
        Meteor.logout(function(err) {
            if(err){
-               alert("Couldnt logout");
+               alert("Couldn't logout");
            }else {
                Router.go("/adminLogin.htm")
            }
@@ -59,8 +61,9 @@ Template.adminHeaderTemplate.events({
    }
 });
 
-
+/*When the user has been logged in do the specified actions below*/
 Template.adminLoggedInTemplate.events({
+    /*Side bar navigation links*/
     'click #categories':function(event,templ){
         event.preventDefault();
         Session.set("currentPage","CategoryIndexTemplate");

@@ -1,11 +1,13 @@
+/*Items shown at the item-index.html page*/
 Template.ItemIndexTemplate.helpers({
    'items':function(){
        return Items.find();
    }
 });
 
-
+/*set all the editing Item values of the item-edit.html page*/
 Template.ItemEditTemplate.rendered = function(){
+    /*The current instance is stored the session when the user clicks on the edit button in item-index.html page*/
   var item = Session.get("EditingItem");
     $("#itemName").val(item.name);
     $("#itemPrice").val(item.price);
@@ -24,7 +26,7 @@ Template.ItemEditTemplate.rendered = function(){
 
 };
 
-
+/*This is used to display in item-edit.html as the select drop down list to fit the item to one of the categories*/
 Template.ItemEditTemplate.helpers({
    'categories':function(){
        return Categories.find()

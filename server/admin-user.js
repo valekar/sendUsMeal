@@ -1,3 +1,4 @@
+/*This is a separate admin-user.js for the admin*/
 Meteor.methods({
     addAdminUser:function(attrs){
         var admin = false;
@@ -34,3 +35,12 @@ Meteor.methods({
     }
 
 });
+
+/*MEteor methods for media remove functionality*/
+Meteor.methods({
+    "removeMedia":function(attrs){
+        if(Meteor.users.findOne({profile:{admin:true}})._id==attrs.userId) {
+            Medias.remove({_id:attrs.mediaId});
+        }
+    }
+})

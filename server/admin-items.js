@@ -1,3 +1,4 @@
+/*Item methods for storing updating and deleting the items*/
 Meteor.methods({
     insertItem:function(attrs){
        if(Meteor.users.findOne({profile:{admin:true}})._id==attrs.userId){
