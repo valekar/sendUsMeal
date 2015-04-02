@@ -1,0 +1,18 @@
+<!--Admin layout -->
+<template name = "CustomerLayout">
+    <header>
+        <div class="container-fluid">
+            {{> yield "headerSection"}}
+        </div>
+    </header>
+    <section>
+        <div class="container-fluid">
+            {{> yield "bodySection"}}
+        </div>
+    </section>
+    <footer>
+        <div class="container-fluid">
+            {{> yield "footerSection"}}
+        </div>
+    </footer>
+</template>

@@ -1,12 +1,7 @@
 .my-header {
-
-
-
     padding: 8% 5%;
     padding-top: 1%;
     position: relative;
-
-
     background-image: url('banner.png')
 }
 
@@ -161,3 +156,45 @@
 .forgot-password:focus{
     color: rgb(12, 97, 33);
 }
+
+
+
+.custom-header{
+    background-color: #3BE8CA;
+    padding: 4% 5%;
+    padding-top: 1%;
+    position: relative;
+
+/*background-image: url("banner.png") ;*/
+
+
+}
+
+.custom-lander-body{
+    background-color:#333333;
+    background-image: url("background.jpg");
+    padding: 3% 0%;
+    position: relative;
+    margin-top: -1.2%;
+}
+
+.custom-nav{
+    position: relative;
+    margin-top: -5.5%;
+
+}
+
+.custom-food-body{
+    background-color: #24476b;
+    padding: 3% 0%;
+    position: relative;
+}
+
+.custom-food-body .container {
+    padding: 3%;
+    border: 1px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+
