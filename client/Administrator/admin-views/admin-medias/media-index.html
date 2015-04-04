@@ -9,15 +9,12 @@
     <br>
     <div class="row">
         {{#each medias}}
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 well well-lg">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 well well-lg text-center">
 
-                <img src="{{url}}" alt="alt-text" class="img-responsive" />
+                <img src="{{url}}" alt="alt-text" class="  img-thumbnail my-thumbnail" />
                 <div class="checkbox">
-                    <label>
+                    <input type="radio" value="{{_id}}" id="removeCheckbox" name="ItemMediaCheckbox">
                         <strong>{{_id}}</strong>
-                        <input type="radio" value="{{_id}}" id="removeCheckbox" name="ItemMediaCheckbox">
-
-                    </label>
                 </div>
             </div>
             <div class="btn-separator">

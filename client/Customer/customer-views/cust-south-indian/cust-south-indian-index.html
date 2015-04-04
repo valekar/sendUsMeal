@@ -1,0 +1,52 @@
+<template name = "CustomerSouthIndianBodyTemplate">
+    <div class="custom-food-body">
+        <!--North Dishes-->
+        <div class="container">
+
+            <!--South Dishes-->
+            <div class="row">
+                <!--Header-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="text-center">
+                            <h1>South Indian Dishes</h1>
+                        </div>
+                    </div>
+                    <!--Start of panel-->
+                    <div class="panel-body">
+                        <!--Cart place-->
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+
+                        </div>
+
+                        <!--Each item styling-->
+                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                            {{#each southItems}}
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 well well-lg text-center">
+                                    <!--Start of panel-->
+                                    <!--display the price and name-->
+                                    <div class="panel-heading">
+                                        <span class="my-food-name-price">{{name}}</span>
+                                        <div class="pull-right ">
+                                            <i class="fa fa-rupee fa-2x"></i>
+                                            <span class="my-food-name-price">{{price}}</span>
+                                        </div>
+                                    </div>
+                                    <!--display the image of the body-->
+                                    <div class="panel-body">
+                                        <img src="{{url}}" alt="alt-text" class=" img-rounded my-thumbnail"/>
+                                    </div>
+                                    <!--End of panel-->
+                                </div>
+                            {{/each}}
+                        </div>
+                        <!--End of styling the images -->
+                    </div>
+                    <!--End of panel-->
+                </div>
+            </div>
+        </div>
+        <!--End of container-->
+    </div>
+    <!--End of custom-food-body-->
+</template>

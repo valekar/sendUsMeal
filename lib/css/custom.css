@@ -159,19 +159,24 @@
 
 
 
-.custom-header{
-    background-color: #3BE8CA;
+
+
+.custom-header {
+    background-color: #244755;
+    color: #ffffff;
     padding: 4% 5%;
     padding-top: 1%;
     position: relative;
 
-/*background-image: url("banner.png") ;*/
-
-
+/*background-image: url("bg_header.jpg") ;*/
 }
 
+.custom-header h1,h4{
+    color: #ffffff;
+}
+
+
 .custom-lander-body{
-    background-color:#333333;
     background-image: url("background.jpg");
     padding: 3% 0%;
     position: relative;
@@ -185,16 +190,71 @@
 }
 
 .custom-food-body{
-    background-color: #24476b;
-    padding: 3% 0%;
-    position: relative;
+    margin-top: -1.2%;
+    background-color: #244755;
+
+
 }
 
-.custom-food-body .container {
-    padding: 3%;
+
+
+.custom-food-body .panel {
+    padding: 1%;
     border: 1px;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
     border-radius: 10px;
     background-color: #ffffff;
 }
 
+/*.custom-food-body .panel .panel-heading {
+ background-color: #ffffff;
+}
 
+.custom-food-body .panel .panel-heading h1 {
+    color: #555555;
+}
+.custom-food-body .panel .panel-heading {
+    color: #000000;
+}
+
+.custom-food-body .panel .panel-body .well{
+   background-color: #ffffff;
+
+}*/
+
+.my-food-name-price {
+    font-size: 160%;
+
+}
+
+.my-thumbnail{
+    width: 200px;
+    height: 150px;
+
+}
+
+
+#myScrollspy.affix {
+    position: fixed;
+    top: 0px;
+    width: 14.5%;
+    z-index:10;
+    margin-left: -0.75%;
+    padding-left: -3%;
+    margin-top:-1%;
+}
+
+#myNavSpy.affix{
+    position: fixed;
+    top: 0px;
+    width: 17%;
+    z-index:10;
+    margin-left: -1.5%;
+
+ }
+
+
+.my-cart .table {
+    margin-left: -3%;
+}

@@ -41,6 +41,9 @@ Template.newMediaTemplate.events({
 
         var fileObj = new FS.File(file);
 
+
+
+
         //console.log(fileObj);
         /*This has to be inserted on the client side because the FS collection doesn't allow you to add on the server side*/
         Medias.insert(fileObj,function (err, fileObj) {

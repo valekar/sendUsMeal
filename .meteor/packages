@@ -13,3 +13,5 @@ multiply:iron-router-progress
 fortawesome:fontawesome
 cfs:standard-packages
 cfs:filesystem
+cfs:graphicsmagick
+reactive-var

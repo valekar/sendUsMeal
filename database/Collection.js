@@ -10,9 +10,46 @@ Items = new Mongo.Collection("items");
 /*Category table*/
 Categories = new Mongo.Collection("categories");
 
+
+
+
 /**************************/
 Medias = new FS.Collection("medias", {
-    stores: [new FS.Store.FileSystem("medias", {path: "~/projectMedias"})]
+    stores: [new FS.Store.FileSystem("medias",
+        {
+            beforeWrite: function(fileObj) {
+                // We return an object, which will change the
+                // filename extension and type for this store only.
+                return {
+                    extension: 'png',
+                    type: 'image/png'
+                };
+            },
+            path: "~/projectMedias",
+            transformWrite: function(fileObj, readStream, writeStream) {
+                // Transform the image into a 30x10px thumbnail
+                //gm(readStream, fileObj.name()).resize('200', '200').stream().pipe(writeStream);
+                gm(readStream).resize(350,350).stream('PNG').pipe(writeStream);
+            }
+        }
+    )],
+    filter: {
+        allow: {
+            contentTypes: ['image/*'] //allow only images in this FS.Collection
+        }
+    }
+
+    /* new FS.Store.FileSystem("thumbs", {
+     transformWrite: function(fileObj, readStream, writeStream) {
+     // Transform the image into a 30x10px thumbnail
+     gm(readStream, fileObj.name()).resize('200', '150').stream().pipe(writeStream);
+     },
+     path: "~/projectMedias"
+
+     })*/
 });
 /**************************/
 
+ItemList = new Mongo.Collection("itemList");
+
+Carts = new Mongo.Collection('carts');
