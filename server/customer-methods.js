@@ -34,18 +34,35 @@ Meteor.methods({
             );
         }
 
-
-
-
+    },
+    'deleteItemList':function(attr){
+        //console.log("deleting an itemlist" + attr.itemId +"  "+ attr.currentSessionId);
+        ItemList.remove({itemId:attr.itemId,currentSessionId:attr.currentSessionId});
     }
 });
 
 
 Meteor.methods({
     'insertCart':function(attr){
-        Carts.insert({
-            itemList : attr.itemList
-        });
+
+        if(this.connection.id == attr.currentSessionId){
+
+            var itemLists = ItemList.find({currentSessionId:attr.currentSessionId}).fetch();
+            var itemListIds = [];
+            for(var i=0;i<itemLists.length;i++){
+                itemListIds[i] = itemLists[i]._id;
+            }
+
+            var id = Carts.insert({
+                itemListIds:itemListIds,
+                sessionId:attr.currentSessionId,
+                grandTotal:attr.grandTotal
+            });
+
+            return id;
+        }
+
+
     }
 });
 

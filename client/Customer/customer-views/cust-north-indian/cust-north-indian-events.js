@@ -11,19 +11,42 @@ Template.CustomerNorthIndianBodyTemplate.events({
         upsertIntoItemList(object,quantity,currentSessionId);
     },
     'click #removeNorthFood':function(event,templ){
-        //get the current item{ID}Quantity
-        // this is set in the rendered template (CustomerNorthIndianBodyTemplate)
-        //update only if the value of the current item{ID}Quantity is not equal to zero
-        if(Session.get("item"+this._id+"Quantity")!=0){
-            Session.set("item"+this._id+"Quantity",Session.get("item"+this._id+"Quantity")-1);
-        }
-
 
         var quantity = Session.get("item"+this._id+"Quantity");
         var object = this;
         //defined in the router waitOn method
         var currentSessionId = Session.get("currentSessionId");
-        upsertIntoItemList(object,quantity,currentSessionId);
+
+        //get the current item{ID}Quantity
+        // this is set in the rendered template (CustomerNorthIndianBodyTemplate)
+        //update only if the value of the current item{ID}Quantity is not equal to zero
+        if(Session.get("item"+this._id+"Quantity")!=0){
+            Session.set("item"+this._id+"Quantity",Session.get("item"+this._id+"Quantity")-1);
+            upsertIntoItemList(object,quantity,currentSessionId);
+        }
+        else {
+            //remove the item from the itemlist if the item{itemID}Quantity is 0
+            deleteFromItemList(object,currentSessionId);
+        }
+    },
+
+    'click #orderFood':function(){
+        var currentSessionId = Session.get("currentSessionId");
+        var attrs = {
+            currentSessionId:currentSessionId,
+            grandTotal:Session.get("grandTotalAmount")
+        }
+        Meteor.call("insertCart",attrs,function(err,result) {
+            if (err) {
+                alert("Couldn't process your orders");
+            }
+            else {
+                Session.set("cartId",result);
+                Router.go("/order");
+               // alert(result);
+            }
+
+        });
     }
 });
 
@@ -45,4 +68,20 @@ upsertIntoItemList = function(object,quantity,currentSessionId){
             alert("Couldn't add the item to the cart");
         }
     });
-}
+};
+
+
+deleteFromItemList = function(object,currentSessionId){
+  var attr = {
+      itemId : object._id,
+      currentSessionId:currentSessionId
+  }
+
+
+    Meteor.call('deleteItemList',attr ,function(err,result){
+       if(err){
+           alert("Couldnt remove");
+       }
+    });
+
+};

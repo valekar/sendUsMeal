@@ -22,3 +22,7 @@ Meteor.publish('Categories',function(id){
 Meteor.publish('Medias',function(){
    return Medias.find();
 });
+
+Meteor.publish("Companies",function(){
+    return Companies.find();
+})

@@ -13,13 +13,34 @@ Template.CustomerNorthIndianBodyTemplate.helpers({
 
     'grandTotalAmount':function(){
         return Session.get("grandTotalAmount");
+    },
+    'showOrderButton':function(){
+
+        var len = ItemList.find().fetch().length;
+        if(len<=0){
+            return false;
+        }
+        else{
+            return true;
+        }
+
     }
+
+
+
 });
 
 
 Template.CustomerNorthIndianBodyTemplate.rendered = function() {
-    // got this data from router
 
+
+
+    /**
+     *
+     * @type {data|string|CanvasPixelArray|any|Object[]|Object}
+     * this is used to remove & delete the items from the session cart
+     */
+    // got this data from router
     var items = this.data && this.data.northItemsFromRoute;
    // console.log(items);
     for(var i=0;i<items.length;i++){
@@ -29,17 +50,29 @@ Template.CustomerNorthIndianBodyTemplate.rendered = function() {
     }
 
 
+    /**
+     * this is used to affic the cart if the user scrolls down
+     */
+
     $("#myScrollspy").affix({
         offset: {
             top: 330
         }
     });
 
-    $("#myNavSpy").affix({
+
+    /*$("#myNavSpy").affix({
         offset: {
             top: 335
         }
     });
+    */
+
+
+    /**
+     * used to hide/show the Order button
+     */
+    Session.set("NoOfItemListInCart",this.data.northItemsFromRoute.length);
 
 };
 

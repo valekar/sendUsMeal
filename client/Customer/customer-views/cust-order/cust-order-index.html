@@ -1,0 +1,108 @@
+<template name = "CustomerOrderBodyTemplate">
+    Your order details
+
+    {{#each customerOrder}}
+        {{_id}}
+        {{grandTotal}}
+        {{itemListIds}}
+    {{/each}}
+
+    <div class="container">
+    <section class="cart-section">
+        <!--Cart place-->
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" >
+            <div class="panel panel-primary" data-spy="affix" id = "myScrollspy">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center">Your Orders</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead class="text-center">
+                        <tr>
+                            <th>Food</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{#each itemList}}
+                            <tr>
+                                <td>{{itemName}}</td>
+                                <td>{{itemQuantity}}</td>
+                                <td>{{itemTotalPrice}}</td>
+                            </tr>
+                        {{/each}}
+                        <tr>
+                            <td colspan="3"></td>
+                        </tr>
+                        <tr>
+
+                            <td colspan="2"><strong>Grand Total</strong> </td>
+                            <td><i class="fa fa-rupee fa-2x"> </i> {{grandTotalAmount}}</td>
+                        </tr>
+                        {{#if showOrderButton}}
+                            <tr>
+                                <td colspan="3" class="text-center">
+                                    <button class="btn btn-primary" id = "orderFood">Order</button>
+                                </td>
+                            </tr>
+                        {{/if}}
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <sction class = "customer-details">
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                <div class="panel panel-primary">
+                	  <div class="panel-heading">
+                          <h2 class="panel-title">Contact Details</h2>
+                	  </div>
+                	  <div class="panel-body">
+                			<form action="" method="POST" role="form">
+
+                                <div class="form-group">
+                                    <label for="">Select a listed Companies</label>
+                                    <select name = "selectCompany" id = "selectCompany" class="form-control input-lg">
+
+                                        {{#each companies}}
+                                            <option value = "{{_id}}"> {{name}},{{location}}</option>
+                                        {{/each}}
+
+
+                                    </select>
+                                </div>
+
+                				<div class="form-group">
+                					<label for="">Name</label>
+                					<input type="text" class="form-control" name="" id="" placeholder="Please enter your name">
+                				</div>
+
+                                <div class="form-group">
+                                    <label for="">Phone Number</label>
+                                    <input type="text" class="form-control" name="" id="" placeholder="We promise,your phone number will not be exposed">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">Email Id</label>
+                                    <input type="email" class="form-control" name="" id="" placeholder="we promise,your emailId will not be exposed">
+                                </div>
+
+
+
+
+                				<button type="submit" class="btn btn-primary" id="customerPlaceOrder">Place Your Order</button>
+                			</form>
+                	  </div>
+                </div>
+            </div>
+     </sction>
+
+
+    </div>
+
+</template>

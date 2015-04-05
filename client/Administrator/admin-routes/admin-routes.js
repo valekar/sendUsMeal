@@ -9,7 +9,8 @@ Router.map(function(){
             return [
               Meteor.subscribe("Items", Meteor.userId()),
               Meteor.subscribe("Categories",Meteor.userId()),
-              Meteor.subscribe('Medias')
+              Meteor.subscribe('Medias'),
+              Meteor.subscribe("Companies")
           ]}
             else return;
         },

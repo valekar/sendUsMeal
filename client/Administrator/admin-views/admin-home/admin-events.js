@@ -81,6 +81,9 @@ Template.adminLoggedInTemplate.events({
     'click #medias':function(event,templ){
         Session.set("currentPage","MediaIndexTemplate");
 
+    },
+    'click #companies':function(event,templ){
+        Session.set("currentPage","CompanyIndexTemplate");
     }
 
 });

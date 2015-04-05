@@ -1,4 +1,7 @@
 <template name = "CustomerNorthIndianBodyTemplate">
+
+
+
     <div class="custom-food-body"  data-spy="scroll" data-target="#myScrollspy">
         <!--North Dishes-->
         <div class="container">
@@ -45,6 +48,14 @@
                                               <td colspan="2"><strong>Grand Total</strong> </td>
                                               <td><i class="fa fa-rupee fa-2x"> </i> {{grandTotalAmount}}</td>
                                           </tr>
+                                          {{#if showOrderButton}}
+                                          <tr>
+                                              <td colspan="3" class="text-center">
+                                                  <button class="btn btn-primary" id = "orderFood">Order</button>
+                                              </td>
+                                          </tr>
+                                          {{/if}}
+
                                           </tbody>
 
                                       </table>

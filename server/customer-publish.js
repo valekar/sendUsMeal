@@ -12,3 +12,7 @@ Meteor.publish('CustomerItemList',function(currentSessionId){
    return ItemList.find({currentSessionId:currentSessionId});
 });
 
+
+Meteor.publish('CustomerCartOrder',function(cartId){
+    return Carts.find({_id:cartId});
+})
