@@ -1215,4 +1215,10 @@ Template.CustomerOrderBodyTemplate.rendered = function(){
 
     })(jQuery);
 
+
+
+
+
+    /**/
+
 };

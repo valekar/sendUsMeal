@@ -16,7 +16,7 @@
 
     <div class="container">
         <div class="custom-nav">
-            <nav class="navbar navbar-inverse" role="navigation">
+            <nav class="navbar navbar-default" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -24,6 +24,11 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/north-indian">North Indian</a></li>
                         <li><a href="/south-indian">South Indian</a></li>
+
+                        {{#if currentUser}}
+                            <li><a href = "#" id = "customerLogout"> Logout</a></li>
+                        {{/if}}
+
                     </ul>
 
                 </div><!-- /.navbar-collapse -->

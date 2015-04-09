@@ -1,0 +1,25 @@
+<template name = "CustomerAllOrderBodyTemplate">
+
+{{#each orders}}
+    <table class="table table-hover">
+    	<thead>
+    		<tr>
+    			<th>cart ID</th>
+                <th>user ID</th>
+                <th>gradn total</th>
+                <th>created at</th>
+    		</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+    			<td>{{cartId}}</td>
+                <td>{{userId}}</td>
+                <td>{{grandTotal}}</td>
+                <td>{{created_at}}</td>
+    		</tr>
+    	</tbody>
+    </table>
+    
+    {{/each}}
+
+</template>

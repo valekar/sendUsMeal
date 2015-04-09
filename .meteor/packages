@@ -15,3 +15,5 @@ cfs:standard-packages
 cfs:filesystem
 cfs:graphicsmagick
 reactive-var
+accolver:twilio-meteor
+kevohagan:sweetalert

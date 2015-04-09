@@ -55,3 +55,6 @@ ItemList = new Mongo.Collection("itemList");
 Carts = new Mongo.Collection('carts');
 
 Companies = new Mongo.Collection('companies');
+
+
+Orders = new Mongo.Collection('orders');

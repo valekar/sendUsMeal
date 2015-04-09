@@ -72,3 +72,19 @@ Meteor.methods({
         return this.connection.id;
     }
 });
+
+
+
+Meteor.methods({
+   'insertOrder':function(attrs){
+       if(this.userId == attrs.userId){
+           Orders.insert({
+               created_at:attrs.created_at,
+               userId:attrs.userId,
+               cartId:attrs.cartId,
+               grandTotal:attrs.grandTotal,
+               active:attrs.active
+           })
+       }
+   }
+});

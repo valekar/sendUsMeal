@@ -10,7 +10,8 @@ Template.newCategoryTemplate.events({
             name : $("#categoryName").val(),
             created_at:moment().format('MMMM Do YYYY'),
             /*Pass the userId to verify if the user is admin*/
-            userId:Meteor.userId()
+            userId:Meteor.userId(),
+            active:false
         }
         /*This call has been defined in categories.js file on the server side*/
         Meteor.call('insertCategory',attrs,function(err){

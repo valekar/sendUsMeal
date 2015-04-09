@@ -15,4 +15,11 @@ Meteor.publish('CustomerItemList',function(currentSessionId){
 
 Meteor.publish('CustomerCartOrder',function(cartId){
     return Carts.find({_id:cartId});
-})
+});
+
+
+Meteor.publish('CustomerOrders',function(){
+    return Orders.find({userId:this.userId});
+});
+
+

@@ -41,6 +41,7 @@ Template.CustomerNorthIndianBodyTemplate.events({
                 alert("Couldn't process your orders");
             }
             else {
+                //this is used in cust-order.html page
                 Session.set("cartId",result);
                 Router.go("/order");
                // alert(result);

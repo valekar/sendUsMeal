@@ -70,6 +70,7 @@ Router.map(function(){
                   Meteor.subscribe('CustomerCartOrder',Session.get("cartId")),
                   Meteor.subscribe('CustomerItemList',Session.get("currentSessionId")),
                   Meteor.subscribe('Companies')
+
               ]
             },
             action:function(){
@@ -79,5 +80,24 @@ Router.map(function(){
                 this.render('CustomerFooterTemplate', {to: 'footerSection'});
                 this.layout('CustomerLayout');
             }
-        });
+        }),
+        this.route("/orders",{
+            waitOn:function(){
+                return [
+
+                    Meteor.subscribe('CustomerOrders')
+
+
+                ]
+            },
+            action:function(){
+                /*show the adminHome.htm page*/
+                this.render('CustomerHeaderTemplate', {to: 'headerSection'});
+                this.render('CustomerAllOrderBodyTemplate', {to: 'bodySection'});
+                this.render('CustomerFooterTemplate', {to: 'footerSection'});
+                this.layout('CustomerLayout');
+            }
+        })
+
+
 });
