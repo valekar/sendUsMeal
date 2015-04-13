@@ -2,7 +2,7 @@ Meteor.methods({
 
     addCustomerUser:function(attrs){
         var password =  "Slice" + Math.floor(Math.random()*900) + 100;
-        sendSms(attrs.phoneNumber);
+        //sendSms(attrs.phoneNumber);
         if(password!=null){
             var userObject = {
                 'username':attrs.phoneNumber,
@@ -78,7 +78,7 @@ Meteor.methods({
 
                 console.log("Setting the password !! :: "+ password);
             Accounts.setPassword(userId,password);
-            sendSms(phonenumber,password);
+           // sendSms(phonenumber,password);
 
 
 

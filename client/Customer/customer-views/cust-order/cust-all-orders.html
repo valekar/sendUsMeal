@@ -1,25 +1,69 @@
 <template name = "CustomerAllOrderBodyTemplate">
+<div class="container">
+	<div class="row">
 
-{{#each orders}}
-    <table class="table table-hover">
-    	<thead>
-    		<tr>
-    			<th>cart ID</th>
-                <th>user ID</th>
-                <th>gradn total</th>
-                <th>created at</th>
-    		</tr>
-    	</thead>
-    	<tbody>
-    		<tr>
-    			<td>{{cartId}}</td>
-                <td>{{userId}}</td>
-                <td>{{grandTotal}}</td>
-                <td>{{created_at}}</td>
-    		</tr>
-    	</tbody>
-    </table>
-    
-    {{/each}}
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th>Ordered Items</th>
+                    <th>user Details</th>
+                    <th>grand total</th>
+                    <th>created at</th>
+					<th>Cancel?</th>
+                </tr>
+                </thead>
+                <tbody>
+				{{#each orders}}
+                <tr>
+                    <td>
+
+                        <table class="table table-bordered">
+                            <thead class="text-center">
+                            <tr>
+                                <th>Food</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+							{{#each itemList}}
+                                <tr>
+                                    <td>{{itemName}}</td>
+                                    <td>{{itemQuantity}}</td>
+                                    <td>{{itemTotalPrice}}</td>
+                                </tr>
+							{{/each}}
+
+                            <tr>
+
+                                <td colspan="2"><strong>Grand Total</strong> </td>
+                                <td><i class="fa fa-rupee fa-2x"> </i> {{grandTotal}}</td>
+                            </tr>
+
+                            </tbody>
+
+                        </table>
+                    </td>
+                    <td>{{userDetails.userName}},
+						<br>{{userDetails.companyName}},
+						<br> {{userDetails.companyLocation}},
+						<br> {{userDetails.userPhone}}
+					</td>
+                    <td>{{grandTotal}}</td>
+                    <td>{{created_at}}</td>
+
+
+					<td>
+                        <button type="submit" class="btn btn-danger" id = "cancelOrder">Cancel</button>
+					</td>
+                </tr>
+				{{/each}}
+                </tbody>
+            </table>
+
+
+	</div>
+</div>
+
 
 </template>

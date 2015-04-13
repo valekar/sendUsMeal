@@ -85,8 +85,10 @@ Router.map(function(){
             waitOn:function(){
                 return [
 
-                    Meteor.subscribe('CustomerOrders')
-
+                    Meteor.subscribe('CustomerOrders'),
+                    Meteor.subscribe('CustomerCarts',Meteor.userId()),
+                    Meteor.subscribe('CustomerOrderItemList'),
+                    Meteor.subscribe('CustomerCompanies')
 
                 ]
             },

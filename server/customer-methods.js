@@ -86,5 +86,11 @@ Meteor.methods({
                active:attrs.active
            })
        }
-   }
+   },
+
+    'deleteOrder':function(attrs){
+        if(this.userId == attrs.userId){
+            Orders.remove({_id:attrs._id,active:true});
+        }
+    }
 });

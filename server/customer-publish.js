@@ -22,4 +22,18 @@ Meteor.publish('CustomerOrders',function(){
     return Orders.find({userId:this.userId});
 });
 
+Meteor.publish('CustomerCarts',function(attr){
+    if(attr == this.userId){
+        return Carts.find();
+    }
+});
+
+
+Meteor.publish('CustomerOrderItemList',function(){
+   return ItemList.find();
+});
+
+Meteor.publish('CustomerCompanies',function(){
+   return Companies.find();
+});
 
