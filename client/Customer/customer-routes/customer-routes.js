@@ -6,7 +6,8 @@ Router.map(function(){
 
           return [
               Meteor.subscribe('CustomerItems'),
-              Meteor.subscribe('CustomerMedias')
+              Meteor.subscribe('CustomerMedias'),
+              Meteor.subscribe('Companies')
           ]
         },
         action:function(){
@@ -43,6 +44,7 @@ Router.map(function(){
 
                 return [
                     Meteor.subscribe('CustomerItems'),
+                    Meteor.subscribe('Companies'),
                     Meteor.subscribe('CustomerMedias'),
                     Meteor.subscribe('CustomerItemList',Session.get("currentSessionId"))
                 ]
@@ -73,6 +75,17 @@ Router.map(function(){
 
               ]
             },
+            onBeforeAction:function(){
+                //redirect the user to the north
+                // indian items if nothing is present in the cart
+               if(Session.get('grandTotalAmount') == null){
+                   this.redirect('/north-indian');
+               } else{
+                   this.next();
+               }
+
+            }
+            ,
             action:function(){
                 /*show the adminHome.htm page*/
                 this.render('CustomerHeaderTemplate', {to: 'headerSection'});

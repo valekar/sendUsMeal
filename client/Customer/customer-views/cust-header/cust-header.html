@@ -6,9 +6,13 @@
                 <h1>Send Me Meal</h1>
                 <h4>[Make Your Own food Combos]</h4>
             </div>
-            <div class="pull-right">
-                <button class="btn btn-primary">Login</button>
-            </div>
+            {{#if currentUser}}
+
+            {{else}}
+                <div class="pull-right">
+                    <button class="btn btn-primary" data-toggle="modal"  data-target="#LoginModal">Login</button>
+                </div>
+            {{/if}}
 
         </div>
 
@@ -28,21 +32,21 @@
 
 
                     </ul>
-
+                    {{#if currentUser}}
                     <ul class="nav navbar-nav navbar-right">
-                        {{#if currentUser}}
+
                         <li><a href="/orders">Orders</a></li>
-                        {{/if}}
+
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{currentUser.profile.personalName}} <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#" id = "customerChangePassword">Change Password</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#changePasswordModal">Change Password</a></li>
                                 <li><a href = "#" id = "customerLogout"> Logout</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li><a href="#">Separated link</a></li>
+
                             </ul>
                         </li>
                     </ul>
+                    {{/if}}
 
                 </div><!-- /.navbar-collapse -->
             </nav>
@@ -50,6 +54,54 @@
 
 
 
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    {{> UI.dynamic template=currentShowingPageTemplate}}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="ChangePassword" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel">Change Password</h3>
+                </div>
+                <div class="modal-body">
+                   <form action="" method="POST" role="form">
+
+
+                   	<div class="form-group">
+                   		<label for="">New Password</label>
+                   		<input type="password" class="form-control" name="" id="password" placeholder="Enter your new Password">
+                   	</div>
+
+                       <div class="form-group">
+                           <label for="">Confirm New Password</label>
+                           <input type="password" class="form-control" name="" id="confirmPassword" placeholder="Enter your new Password again">
+                       </div>
+
+
+                       <button type="submit" class="btn btn-primary" id = "customerChangePassword">Submit</button>
+                   </form>
+                </div>
+
+            </div>
         </div>
     </div>
 

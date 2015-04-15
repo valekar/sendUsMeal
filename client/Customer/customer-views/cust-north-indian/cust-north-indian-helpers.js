@@ -24,6 +24,10 @@ Template.CustomerNorthIndianBodyTemplate.helpers({
             return true;
         }
 
+    },
+
+    'companies':function(){
+        return Companies.find();
     }
 
 
@@ -73,6 +77,15 @@ Template.CustomerNorthIndianBodyTemplate.rendered = function() {
      * used to hide/show the Order button
      */
     Session.set("NoOfItemListInCart",this.data.northItemsFromRoute.length);
+
+
+    if(!Meteor.user() && Session.get("deliveredPlaces") != true){
+        //used to alert the user when he clicks on the north indian food items
+        $("#deliveredPlaces").modal('show');
+        Session.set("deliveredPlaces",true);
+    }
+
+
 
 };
 

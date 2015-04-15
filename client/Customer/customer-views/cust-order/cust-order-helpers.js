@@ -25,20 +25,26 @@ Template.CustomerOrderBodyTemplate.helpers({
 
 });
 
-Template.CustomerRegisterTemplate.helpers({
-    'companies':function(){
-        return Companies.find();
-    }
-});
 
 
 Template.CustomerSubOrderBodyTemplate.rendered = function(){
     //these are set when the user first registers into the system
     //these sessions are set when the customer logs in
-    $("#orderSelectCompany").val(Session.get("orderSelectCompany"));
-    $("#orderPersonalName").val(Session.get("orderPersonalName"));
-    $("#orderPhoneNumber").val(Session.get("orderPhoneNumber"));
-    $("#orderEmail").val(Session.get("orderEmail"));
+    if(Meteor.userId()) {
+        var user = Meteor.user();
+        //  console.log(user);
+        // set the value for the order page to be populated withe values
+        Session.set("orderSelectCompany", user.profile.company_id);
+        Session.set("orderPersonalName", user.profile.personalName);
+        Session.set("orderPhoneNumber", user.username);
+        Session.set("orderEmail", user.profile.email);
+
+
+        $("#orderSelectCompany").val(Session.get("orderSelectCompany"));
+        $("#orderPersonalName").val(Session.get("orderPersonalName"));
+        $("#orderPhoneNumber").val(Session.get("orderPhoneNumber"));
+        $("#orderEmail").val(Session.get("orderEmail"));
+    }
 }
 
 

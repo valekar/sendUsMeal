@@ -1,0 +1,64 @@
+<template name = "CustomerLoginTemplate">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title text-center">Login</h3>
+        </div>
+        <div class="panel-body">
+            <form action="" method="POST" role="form">
+
+                <div class="form-group">
+                    <label for=""></label>
+                    <input type="text" class="form-control" name="loginPhoneNumber" id="loginPhoneNumber" placeholder="Your Phone Number">
+                </div>
+
+                <div class="form-group">
+                    <label for=""></label>
+                    <input type="password" class="form-control" name="loginPassword" id="loginPassword" placeholder="Password">
+                </div>
+
+
+
+                <button type="submit" class="btn btn-primary" id="loginCustomer">Login</button>
+
+
+                <a id = "goToForgotPassword">Forgot Password?</a>
+
+                <hr>
+                <div class="text-center"><h3>OR</h3></div>
+                <hr>
+
+                <div class="well well-lg text-center">
+                    <h3>Please register</h3>
+                    <button class="btn btn-primary" id = "goToCustomerRegister">Register</button>
+
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</template>
+
+
+<template name = "CustomerForgotPassword">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Forgot Password</h3>
+        </div>
+        <div class="panel-body">
+            <form action="" method="POST" role="form">
+
+
+                <div class="form-group">
+                    <label for="">Phone Number</label>
+                    <input type="text" class="form-control" name="customerForgotPhoneNumber" id="customerForgotPhoneNumber" placeholder="Please enter your number">
+                </div>
+
+
+
+                <button type="submit" class="btn btn-primary" id = "customerForgotPassword">Send the password</button>
+                <button class="btn btn-primary" id = "goToCustomerLogin">Back</button>
+            </form>
+        </div>
+    </div>
+</template>

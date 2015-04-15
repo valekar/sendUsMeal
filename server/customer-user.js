@@ -2,7 +2,7 @@ Meteor.methods({
 
     addCustomerUser:function(attrs){
         var password =  "Slice" + Math.floor(Math.random()*900) + 100;
-        //sendSms(attrs.phoneNumber);
+        sendSms(attrs.phoneNumber);
         if(password!=null){
             var userObject = {
                 'username':attrs.phoneNumber,
@@ -70,21 +70,32 @@ Meteor.methods({
 
         )
     },
+    //used for resetting the forgotten password
     'updateCustomerPassword':function(phonenumber){
-        if(typeof  Meteor.users.find({username:phonenumber}).fetch()[0] != 'undefined'){
-            var userId = Meteor.users.find({username:phonenumber}).fetch()[0]._id;
+        phonenumber = parseInt(phonenumber);
+        console.log(phonenumber);
+        if(isNaN(phonenumber)){
+            throw Meteor.Error("Please enter valid number");
+        }
+        //check(phonenumber,Number);
+
+        if(typeof  Meteor.users.find({username:""+phonenumber+""}).fetch()[0] != 'undefined'){
+            var userId = Meteor.users.find({username:phonenumber+""}).fetch()[0]._id;
             //console.log(userId);
             var password =  "Slice" + Math.floor(Math.random()*900) + 100;
 
                 console.log("Setting the password !! :: "+ password);
             Accounts.setPassword(userId,password);
-           // sendSms(phonenumber,password);
+            console.log("Password :: " + password);
+            sendSms(phonenumber,password);
+        }
+    },
 
-
-
-
-
-
+    'changeCustomerPassword':function(attrs){
+        if(this.userId == attrs.userId){
+            Accounts.setPassword(this.userId,attrs.password);
+        }else{
+            throw new Meteor.Error("Couldn't update the password");
         }
     }
 
