@@ -84,6 +84,10 @@ Template.adminLoggedInTemplate.events({
     },
     'click #companies':function(event,templ){
         Session.set("currentPage","CompanyIndexTemplate");
+    },
+    'click #orders':function(event,templ){
+        event.preventDefault();
+        Session.set("currentPage","AdminOrdersIndexTemplate");
     }
 
 });

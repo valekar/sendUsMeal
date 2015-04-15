@@ -19,10 +19,44 @@ Meteor.publish('Categories',function(id){
 });
 
 
-Meteor.publish('Medias',function(){
-   return Medias.find();
+Meteor.publish('Medias',function(id){
+    /*Check if the user is admin*/
+    if(id === Meteor.users.findOne({profile:{admin:true}})._id) {
+        return Medias.find();
+    }
 });
 
-Meteor.publish("Companies",function(){
-    return Companies.find();
-})
+Meteor.publish("Companies",function(id){
+    /*Check if the user is admin*/
+    if(id === Meteor.users.findOne({profile:{admin:true}})._id) {
+        return Companies.find();
+    }
+});
+
+Meteor.publish("Orders",function(id){
+    /*Check if the user is admin*/
+    if(id === Meteor.users.findOne({profile:{admin:true}})._id) {
+        return Orders.find({});
+    }
+});
+
+Meteor.publish('ItemList',function(id){
+    /*Check if the user is admin*/
+    if(id === Meteor.users.findOne({profile:{admin:true}})._id) {
+        return ItemList.find();
+    }
+});
+
+Meteor.publish('Carts',function(id){
+    /*Check if the user is admin*/
+    if(id === Meteor.users.findOne({profile:{admin:true}})._id) {
+        return Carts.find();
+    }
+});
+
+Meteor.publish('Users',function(id){
+    /*Check if the user is admin*/
+    if(id === Meteor.users.findOne({profile:{admin:true}})._id) {
+        return Meteor.users.find();
+    }
+});

@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9680193d-5c6d-4774-814d-8842750c8da2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/coming-soon.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-authen-events.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-authen-events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header-events.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header-events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header-helpers.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header-helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-login.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-helpers.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-index.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/Administrator/admin-views/admin-orders/admin-order-events.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/Administrator/admin-views/admin-orders/admin-order-helpers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/Administrator/admin-views/admin-orders/admin-order-index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Administrator/admin-views/admin-home/admin-events.js" afterPath="$PROJECT_DIR$/client/Administrator/admin-views/admin-home/admin-events.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/admin-publish.js" afterPath="$PROJECT_DIR$/server/admin-publish.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Administrator/admin-routes/admin-routes.js" afterPath="$PROJECT_DIR$/client/Administrator/admin-routes/admin-routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/admin-user.js" afterPath="$PROJECT_DIR$/server/admin-user.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-events.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-helpers.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-index.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-registration-login.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-registration-login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-registration.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-registration.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-south-indian/cust-south-indian-index.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-south-indian/cust-south-indian-index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-routes/customer-routes.js" afterPath="$PROJECT_DIR$/client/Customer/customer-routes/customer-routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/customer-user.js" afterPath="$PROJECT_DIR$/server/customer-user.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sendUsMeal.iws" />
@@ -42,52 +34,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="customer-routes.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/Customer/customer-routes/customer-routes.js">
+      <file leaf-file-name="admin-order-index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-orders/admin-order-index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5763547" vertical-offset="1188" max-vertical-offset="2214">
-              <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
+            <state vertical-scroll-proportion="-9.37037" vertical-offset="719" max-vertical-offset="1242">
+              <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-routes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/Administrator/admin-routes/admin-routes.js">
+      <file leaf-file-name="admin-item-events.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-items/admin-item-events.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1746">
-              <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="2214">
+              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cust-registration.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-registration.html">
+      <file leaf-file-name="admin-order-helpers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-orders/admin-order-helpers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.962963" vertical-offset="253" max-vertical-offset="900">
-              <caret line="29" column="75" selection-start-line="29" selection-start-column="67" selection-end-line="29" selection-end-column="75" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
+              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cust-authen-events.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-authen-events.js">
+      <file leaf-file-name="cust-north-indian-index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2744" max-vertical-offset="3150">
-              <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
+            <state vertical-scroll-proportion="-22.0" vertical-offset="1314" max-vertical-offset="2394">
+              <caret line="106" column="52" selection-start-line="106" selection-start-column="52" selection-end-line="106" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cust-header.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header.html">
+      <file leaf-file-name="admin-publish.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/admin-publish.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.703704" vertical-offset="1259" max-vertical-offset="2070">
-              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="787" max-vertical-offset="1206">
+              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,8 +89,28 @@
       <file leaf-file-name="cust-north-indian-events.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-events.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1674">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1268" max-vertical-offset="1674">
               <caret line="36" column="52" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cust-order-events.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-events.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
+              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin-order-events.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-orders/admin-order-events.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="864">
+              <caret line="24" column="84" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -105,38 +119,18 @@
       <file leaf-file-name="cust-north-indian-helpers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-helpers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2070">
+            <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="2070">
               <caret line="9" column="37" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cust-header-events.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header-events.js">
+      <file leaf-file-name="admin-user.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/admin-user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="972">
-              <caret line="30" column="85" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cust-header-helpers.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header-helpers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-              <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cust-login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="1242">
-              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.73399013" vertical-offset="800" max-vertical-offset="1404">
+              <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -150,10 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/Customer/customer-views/index.html" />
-        <option value="$PROJECT_DIR$/lib/js/customer.js" />
-        <option value="$PROJECT_DIR$/client/Customer/customer-views/layout/CustomerLayout.html" />
-        <option value="$PROJECT_DIR$/client/Administrator/admin-views/admin-categories/category-index.html" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-helpers.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/customer-global/cust-global-functions.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-home.html" />
@@ -165,9 +155,6 @@
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-global/cust-global-functions.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-created.js" />
         <option value="$PROJECT_DIR$/client/Administrator/admin-views/admin-home/admin-loggedIn.html" />
-        <option value="$PROJECT_DIR$/client/Administrator/admin-views/admin-home/admin-events.js" />
-        <option value="$PROJECT_DIR$/client/Administrator/admin-routes/admin-routes.js" />
-        <option value="$PROJECT_DIR$/server/admin-publish.js" />
         <option value="$PROJECT_DIR$/client/Administrator/admin-views/admin-companies/company-new.html" />
         <option value="$PROJECT_DIR$/client/Administrator/admin-views/admin-items/admin-item-events.js" />
         <option value="$PROJECT_DIR$/server/admin-companies.js" />
@@ -187,7 +174,6 @@
         <option value="$PROJECT_DIR$/server/customer-publish.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-all-orders.html" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-registration-login.html" />
-        <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-events.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header-helpers.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-registration.html" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-index.html" />
@@ -201,6 +187,14 @@
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header-events.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-login.html" />
         <option value="$PROJECT_DIR$/client/Customer/customer-routes/customer-routes.js" />
+        <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-events.js" />
+        <option value="$PROJECT_DIR$/client/Administrator/admin-views/admin-home/admin-events.js" />
+        <option value="$PROJECT_DIR$/client/Administrator/admin-routes/admin-routes.js" />
+        <option value="$PROJECT_DIR$/server/admin-publish.js" />
+        <option value="$PROJECT_DIR$/client/Administrator/admin-views/admin-orders/admin-order-helpers.js" />
+        <option value="$PROJECT_DIR$/client/Administrator/admin-views/admin-orders/admin-order-index.html" />
+        <option value="$PROJECT_DIR$/client/Administrator/admin-views/admin-orders/admin-order-events.js" />
+        <option value="$PROJECT_DIR$/server/admin-user.js" />
       </list>
     </option>
   </component>
@@ -361,58 +355,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="customer-views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cust-header" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sendUsMeal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sendUsMeal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Customer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="customer-views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cust-authenticate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sendUsMeal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sendUsMeal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Customer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="customer-routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -432,6 +374,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sendUsMeal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sendUsMeal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sendUsMeal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sendUsMeal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-items" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -580,48 +578,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/admin-permissions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638">
-          <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-home/admin-helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="836">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/admin-publish.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="726">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/admin-categories.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-          <caret line="23" column="5" selection-start-line="12" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-items/item-new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="836">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-items/item-edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71575344" vertical-offset="264" max-vertical-offset="1694">
-          <caret line="31" column="14" selection-start-line="23" selection-start-column="8" selection-end-line="31" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-companies/company-new.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07534247" vertical-offset="0" max-vertical-offset="584">
@@ -671,13 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/admin-user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="264">
@@ -703,13 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="484" max-vertical-offset="1298">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-home/admin-events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="859" max-vertical-offset="2068">
-          <caret line="59" column="10" selection-start-line="53" selection-start-column="6" selection-end-line="59" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -741,32 +683,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-home/admin-loggedIn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="432">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/Meteor/lib/Meteor.jar!/tsMeteorStubs/meteor-v0.9.4.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="8.422901" vertical-offset="40859" max-vertical-offset="48180">
           <caret line="2108" column="12" selection-start-line="2108" selection-start-column="12" selection-end-line="2108" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-items/admin-item-events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="2214">
-          <caret line="54" column="9" selection-start-line="42" selection-start-column="8" selection-end-line="54" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-items/item-index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.259259" vertical-offset="407" max-vertical-offset="954">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -791,13 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-all-orders.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.259259" vertical-offset="632" max-vertical-offset="1332">
-          <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-registration-login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="180">
@@ -805,25 +719,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/customer-publish.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="268" max-vertical-offset="810">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-south-indian/cust-south-indian-index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="378">
           <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.0" vertical-offset="1314" max-vertical-offset="2394">
-          <caret line="106" column="52" selection-start-line="106" selection-start-column="52" selection-end-line="106" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -840,22 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="452">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1242" max-vertical-offset="1674">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -900,14 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="1674">
-          <caret line="36" column="52" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header-events.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="972">
@@ -932,6 +807,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-home/admin-loggedIn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.037037" vertical-offset="26" max-vertical-offset="432">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-all-orders.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.666667" vertical-offset="756" max-vertical-offset="1332">
+          <caret line="61" column="20" selection-start-line="4" selection-start-column="12" selection-end-line="61" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1458" max-vertical-offset="2250">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-items/item-index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.333334" vertical-offset="0" max-vertical-offset="954">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/customer-publish.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="810">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="33" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-home/admin-helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/Customer/customer-routes/customer-routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1646" max-vertical-offset="2214">
+          <caret line="101" column="47" selection-start-line="101" selection-start-column="47" selection-end-line="101" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-home/admin-events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1260" max-vertical-offset="1764">
+          <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-routes/admin-routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1818">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/admin-permissions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.0" vertical-offset="1314" max-vertical-offset="2394">
+          <caret line="106" column="52" selection-start-line="106" selection-start-column="52" selection-end-line="106" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-helpers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2070">
@@ -940,18 +907,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-routes/admin-routes.js">
+    <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-events.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1746">
-          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="1674">
+          <caret line="36" column="52" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/Customer/customer-routes/customer-routes.js">
+    <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-events.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5763547" vertical-offset="1188" max-vertical-offset="2214">
-          <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1214" max-vertical-offset="1620">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-orders/admin-order-helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-items/admin-item-events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="2214">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-orders/admin-order-index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.37037" vertical-offset="719" max-vertical-offset="1242">
+          <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/Administrator/admin-views/admin-orders/admin-order-events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="864">
+          <caret line="24" column="84" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/admin-publish.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="517" max-vertical-offset="1206">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/admin-user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73399013" vertical-offset="800" max-vertical-offset="1404">
+          <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
           <folding />
         </state>
       </provider>

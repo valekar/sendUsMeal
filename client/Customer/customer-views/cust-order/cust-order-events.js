@@ -81,7 +81,4 @@ Template.CustomerAllOrderBodyTemplate.events({
 
 
 
-Template.CustomerLoginTemplate.events({
-
-});
 

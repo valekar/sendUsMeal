@@ -43,4 +43,31 @@ Meteor.methods({
             Medias.remove({_id:attrs.mediaId});
         }
     }
-})
+});
+
+Meteor.methods({
+   'orderDelivered':function(attrs){
+      // console.log("updating :: " + attrs.orderId);
+       if(attrs.id === Meteor.users.findOne({profile:{admin:true}})._id) {
+           Orders.update({_id:attrs.orderId},
+               {
+                   $set:{
+                       active:false
+                   }
+               }
+           );
+       }
+   },
+    'orderPending':function(attrs){
+       // console.log("updating :: " + attrs.orderId);
+        if(attrs.id === Meteor.users.findOne({profile:{admin:true}})._id) {
+            Orders.update({_id:attrs.orderId},
+                {
+                    $set:{
+                        active:true
+                    }
+                }
+            );
+        }
+    }
+});

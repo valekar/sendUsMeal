@@ -1,0 +1,64 @@
+<template name = "AdminOrdersIndexTemplate">
+    <div class="row">
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>Ordered Items</th>
+                <th>user Details</th>
+                <th>grand total</th>
+                <th>created at</th>
+                <th>delivered?</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each orders}}
+                <tr>
+                    <td>
+
+                        <table class="table table-bordered">
+                            <thead class="text-center">
+                            <tr>
+                                <th>Food</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each itemList}}
+                                <tr>
+                                    <td>{{itemName}}</td>
+                                    <td>{{itemQuantity}}</td>
+                                    <td>{{itemTotalPrice}}</td>
+                                </tr>
+                            {{/each}}
+
+                            <tr>
+
+                                <td colspan="2"><strong>Grand Total</strong> </td>
+                                <td><i class="fa fa-rupee fa-2x"> </i> {{grandTotal}}</td>
+                            </tr>
+
+                            </tbody>
+
+                        </table>
+                    </td>
+                    <td>{{userDetails.userName}},
+                        <br>{{userDetails.companyName}},
+                        <br> {{userDetails.companyLocation}},
+                        <br> {{userDetails.userPhone}}
+                    </td>
+                    <td>{{grandTotal}}</td>
+                    <td>{{created_at}}</td>
+                   {{#if active}}
+                   <td> <button class="btn btn-warning" id = "orderDelivered">Pending</button></td>
+                        {{else}}
+                   <td>    <button class="btn btn-danger "  id="orderPending" >Delivered</button></td>
+                    {{/if}}
+
+
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>

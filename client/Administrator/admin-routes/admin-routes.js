@@ -9,8 +9,12 @@ Router.map(function(){
             return [
               Meteor.subscribe("Items", Meteor.userId()),
               Meteor.subscribe("Categories",Meteor.userId()),
-              Meteor.subscribe('Medias'),
-              Meteor.subscribe("Companies")
+              Meteor.subscribe('Medias',Meteor.userId()),
+              Meteor.subscribe("Companies",Meteor.userId()),
+              Meteor.subscribe("Orders",Meteor.userId()),
+              Meteor.subscribe('ItemList',Meteor.userId()),
+              Meteor.subscribe('Carts',Meteor.userId()),
+              Meteor.subscribe('Users',Meteor.userId())
           ]}
             else return;
         },
