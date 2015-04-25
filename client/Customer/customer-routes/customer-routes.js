@@ -7,7 +7,7 @@ Router.map(function(){
           return [
               Meteor.subscribe('CustomerItems'),
               Meteor.subscribe('CustomerMedias'),
-              Meteor.subscribe('Companies')
+              Meteor.subscribe('CustomerCompanies')
           ]
         },
         action:function(){
@@ -44,7 +44,7 @@ Router.map(function(){
 
                 return [
                     Meteor.subscribe('CustomerItems'),
-                    Meteor.subscribe('Companies'),
+                    Meteor.subscribe('CustomerCompanies'),
                     Meteor.subscribe('CustomerMedias'),
                     Meteor.subscribe('CustomerItemList',Session.get("currentSessionId"))
                 ]
@@ -71,7 +71,7 @@ Router.map(function(){
               return [
                   Meteor.subscribe('CustomerCartOrder',Session.get("cartId")),
                   Meteor.subscribe('CustomerItemList',Session.get("currentSessionId")),
-                  Meteor.subscribe('Companies')
+                  Meteor.subscribe('CustomerCompanies')
 
               ]
             },
@@ -112,7 +112,31 @@ Router.map(function(){
                 this.render('CustomerFooterTemplate', {to: 'footerSection'});
                 this.layout('CustomerLayout');
             }
-        })
+        }),
+        this.route("/about-us",{
+           action:function(){
+               this.render('CustomerHeaderTemplate', {to: 'headerSection'});
+               this.render('AboutUsTemplate', {to: 'bodySection'});
+               this.render('CustomerFooterTemplate', {to: 'footerSection'});
+               this.layout('CustomerLayout');
+           }
+        }),
+        this.route("/contact-us",{
+            action:function(){
+                this.render('CustomerHeaderTemplate', {to: 'headerSection'});
+                this.render('ContactUsTemplate', {to: 'bodySection'});
+                this.render('CustomerFooterTemplate', {to: 'footerSection'});
+                this.layout('CustomerLayout');
+            }
+        }),
+        this.route("/terms-and-conditions",{
+            action:function(){
+                this.render('CustomerHeaderTemplate', {to: 'headerSection'});
+                this.render('TermsAndConditionsTemplate', {to: 'bodySection'});
+                this.render('CustomerFooterTemplate', {to: 'footerSection'});
+                this.layout('CustomerLayout');
+            }
+        });
 
 
 });

@@ -58,7 +58,7 @@ Template.CustomerSubOrderBodyTemplate.helpers({
 Template.CustomerAllOrderBodyTemplate.helpers({
 
     'orders':function(){
-         var orders = Orders.find({userId:Meteor.userId()},{sort: {created_at: -1}}).fetch();
+         var orders = Orders.find({userId:Meteor.userId()},{sort: {created_at: -1}}).fetch().reverse();
            // console.log(orders);
            // console.log("Afterr");
             for(var i=0;i<orders.length;i++){

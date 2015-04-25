@@ -1,6 +1,6 @@
 Template.AdminOrdersIndexTemplate.helpers({
    'orders':function(){
-       var orders = Orders.find({created_at:moment().format('MMMM Do YYYY')},{sort: {created_at: -1}}).fetch();
+       var orders = Orders.find({created_at:moment().format('MMMM Do YYYY')},{sort: {created_at: -1}}).fetch().reverse();
        // console.log(orders);
        // console.log("Afterr");
        for(var i=0;i<orders.length;i++){

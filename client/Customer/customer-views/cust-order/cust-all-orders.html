@@ -37,7 +37,7 @@
                             <tr>
 
                                 <td colspan="2"><strong>Grand Total</strong> </td>
-                                <td><i class="fa fa-rupee fa-2x"> </i> {{grandTotal}}</td>
+                                <td><i class="fa fa-rupee fa-1x"> </i> {{grandTotal}}</td>
                             </tr>
 
                             </tbody>
@@ -49,13 +49,17 @@
 						<br> {{userDetails.companyLocation}},
 						<br> {{userDetails.userPhone}}
 					</td>
-                    <td>{{grandTotal}}</td>
+                    <td><i class="fa fa-rupee fa-1x"> </i> {{grandTotal}}</td>
                     <td>{{created_at}}</td>
 
-
+                    {{#if active}}
 					<td>
                         <button type="submit" class="btn btn-danger" id = "cancelOrder">Cancel</button>
 					</td>
+                    {{else}}
+                        <strong>Order has been already dispatched<br></strong>
+                        <strong>Please call +91 9901336755</strong>
+                    {{/if}}
                 </tr>
 				{{/each}}
                 </tbody>
