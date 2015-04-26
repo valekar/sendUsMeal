@@ -2,7 +2,7 @@
 Template.AdminBodyRegistrationTemplate.events({
    'click #RegisterAdmin':function(event,templ){
        event.preventDefault();
-       //alert("Hello");
+       alert("Hello");
 
        if($("#confirmPassword").val() === $("#password").val())
        {
@@ -27,7 +27,18 @@ Template.AdminBodyRegistrationTemplate.events({
 
        }
 
-   }
+   },
+
+    'click #adminChangePassword':function(e,templ){
+        alert("Hello");
+        e.preventDefault();
+
+        Meteor.call('changeAdminPassword',function(err){
+            if(err){
+                sweetAlert("Coudn't change the password");
+            }
+        });
+    }
 });
 /*This is to handle the user(admin) login */
 Template.AdminBodyLoginTemplate.events({
@@ -35,9 +46,9 @@ Template.AdminBodyLoginTemplate.events({
         e.preventDefault();
         var username = $("#userName").val();
         var password = $("#userPassword").val();
-        Meteor.loginWithPassword(username, password, function (err) {
+        Meteor.loginWithPassword({username:username}, password, function (err) {
             if (err) {
-                alert("Error :: " + err);
+                alert("Error :: " + err.reason);
             }
             else {
                 Router.go('/adminHome.htm');
@@ -45,6 +56,7 @@ Template.AdminBodyLoginTemplate.events({
 
         });
     }
+
 
 });
 

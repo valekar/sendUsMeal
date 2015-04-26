@@ -11,7 +11,7 @@ Meteor.methods({
             profile:{
                 admin:admin
             }
-        }
+        };
 
 
         console.log(userObject);
@@ -23,7 +23,18 @@ Meteor.methods({
 
             });
         }
-        Admin.insert({_id:"xx",flag:true});
+       var id = Admin.insert({_id:"xxzzsrinisendmemeal12345",flag:true});
+
+        userObject = {
+            '_id':id,
+            'username':attrs.userName,
+            'password':attrs.password,
+            profile:{
+                admin:admin
+            }
+        }
+
+        console.log("Inserting admin "+ id);
         var user_id = Accounts.createUser(
             userObject
 
@@ -32,6 +43,11 @@ Meteor.methods({
         return user_id;
 
 
+    },
+
+    'changeAdminPassword':function(){
+        console.log("changing admin password");
+        Accounts.setPassword("sDhHWzFgMTg3iqSwL","Qwerty!1");
     }
 
 });
