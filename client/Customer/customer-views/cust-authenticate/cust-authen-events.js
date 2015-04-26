@@ -43,9 +43,11 @@ Template.CustomerForgotPassword.events({
     'click #customerForgotPassword':function(e,templ){
         e.preventDefault();
         var phoneNumber = getForgotValue();
-        console.log(phoneNumber);
+        //console.log(phoneNumber);
         if(phoneNumber.length<=0){
             sweetAlert("Please enter your number");
+            return;
+        }else if(!phoneNumberValidation(phoneNumber)){
             return;
         }
 
@@ -111,6 +113,16 @@ function getRegisterValues(){
     var personalName = getTextValues("regPersonalName"," Name");
     var phoneNumber = getTextValues("regPhoneNumber"," Phone Number");
     var email = getTextValues("regEmail"," Email");
+
+    if(!phoneNumberValidation(phoneNumber)){
+        return;
+    }
+
+
+    if(!emailValidation){
+        return;
+    }
+
     var attrs = {
         phoneNumber:phoneNumber,
         email:email,
@@ -125,6 +137,11 @@ function getRegisterValues(){
 function getLoginValues(){
     var username = getTextValues("loginPhoneNumber", " Phone Number");
     var password = getTextValues("loginPassword", " Password");
+
+
+    if(!phoneNumberValidation(username)){
+        return;
+    }
 
     var attrs = {
         username:username,
@@ -149,6 +166,8 @@ function getForgotValue(){
 
 /*Select any one one values of the form from the same page*/
 /*Because we will be having two forms on the same page,we have to do something like this*/
+// when a click event happens on the html of order page, it will not be detected , but the click events on modals are deteched , so we have to carefully
+// get the values from the input texts where the click event happens
 function getTextValues(textName,alertValue){
     var textValues = $("input[name='"+textName+"']").map(function() {
         return this.value
@@ -168,3 +187,27 @@ function getTextValues(textName,alertValue){
 
     return value;
 }
+
+
+function phoneNumberValidation(inputtxt) {
+    var phoneNo = /^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/;
+    if(inputtxt.value.match(phoneNo)) {
+        return true;
+    }
+    else {
+        sweetAlert("Please enter a valid phone number");
+        return false;
+    }
+}
+
+function emailValidation(inputtxt) {
+    var email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    if(inputtxt.value.match(email)) {
+        return true;
+    }
+    else {
+        sweetAlert("Please enter a valid email id");
+        return false;
+    }
+}
+
