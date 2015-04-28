@@ -26,7 +26,23 @@
 
     </form>
 
-        <button id = "adminChangePassword" class="btn btn-primary">Change Password</button>
+
+        <form action="" method="POST" role="form">
+        	<legend>Change Password</legend>
+
+        	<div class="form-group">
+        		<label for="">password</label>
+        		<input type="password" class="form-control" name="" id="adminPassword" placeholder="Password">
+        	</div>
+
+            <div class="form-group">
+                <label for="">confirm password</label>
+                <input type="password" class="form-control" name="" id="adminConfirmPassword" placeholder="Confirm Password">
+            </div>
+
+            <button id = "adminChangePassword" class="btn btn-primary">Change Password</button>
+
+        </form>
 
     </div>
 </template>

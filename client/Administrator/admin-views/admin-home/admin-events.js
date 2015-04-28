@@ -30,10 +30,19 @@ Template.AdminBodyRegistrationTemplate.events({
    },
 
     'click #adminChangePassword':function(e,templ){
-        alert("Hello");
+       // alert("Hello");
         e.preventDefault();
 
-        Meteor.call('changeAdminPassword',function(err){
+        var password = $("#adminPassword").val();
+        var confirmPassword = $("#adminConfirmPassword").val();
+
+        if(password!=confirmPassword){
+            sweetAlert("password doesn't match");
+            return;
+        }
+
+
+        Meteor.call('changeAdminPassword',password,function(err){
             if(err){
                 sweetAlert("Coudn't change the password");
             }

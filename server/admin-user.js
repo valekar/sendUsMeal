@@ -45,9 +45,10 @@ Meteor.methods({
 
     },
 
-    'changeAdminPassword':function(){
+    'changeAdminPassword':function(password){
         console.log("changing admin password");
-        Accounts.setPassword("sDhHWzFgMTg3iqSwL","Qwerty!1");
+        var user = Meteor.users.findOne();
+        Accounts.setPassword(user._id,password);
     }
 
 });
