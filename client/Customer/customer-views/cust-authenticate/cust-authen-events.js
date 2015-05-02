@@ -18,7 +18,7 @@ Template.CustomerRegisterTemplate.events({
             console.log(result);
 
             if(err){
-                alert("User already exsits please login");
+                alert("User already exists please login");
             }else {
                 Meteor.call("addCustomerUser",attrs,function(err,result){
                     if(err){
@@ -47,20 +47,18 @@ Template.CustomerForgotPassword.events({
     'click #customerForgotPassword':function(e,templ){
         e.preventDefault();
         var phoneNumber = getForgotValue();
-        if(phoneNumber === false){
-            return;
-        }
         //console.log(phoneNumber);
         if(phoneNumber.length<=0){
             sweetAlert("Please enter your number");
             return;
         }else if(!phoneNumberValidation(phoneNumber)){
+            sweetAlert("Please enter a valid Phone Number");
             return;
         }
 
         Meteor.call("updateCustomerPassword",phoneNumber,function(err,res){
             if(err){
-                sweetAlert("Couldnt send you the password");
+                sweetAlert("Couldn't send you the password");
                 console.log(err);
                 Session.set('customerCurrentPage','CustomerRegisterTemplate');
             }
@@ -91,7 +89,7 @@ Template.CustomerLoginTemplate.events({
 
         Meteor.loginWithPassword(attrs.username,attrs.password,function(err,res){
             if(err){
-                sweetAlert("Couldn't login");
+                sweetAlert("Couldn't login,Please check your phone number and password");
             }
 
             else {
@@ -125,12 +123,14 @@ function getRegisterValues(){
     var phoneNumber = getTextValues("regPhoneNumber"," Phone Number");
     var email = getTextValues("regEmail"," Email");
     console.log(phoneNumber);
- /*   if(!phoneNumberValidation(phoneNumber)){
+    if(!phoneNumberValidation(phoneNumber)){
+        sweetAlert("Please enter a valid phone number");
         return false;
-    }*/
+    }
 
 
-   if(!emailValidation){
+   if(!emailValidation(email)){
+       sweetAlert("Please enter a valid email Id");
         return false;
     }
 
@@ -142,8 +142,6 @@ function getRegisterValues(){
             name:personalName
 
         };
-
-
         return attrs;
    // }
 
@@ -155,10 +153,11 @@ function getLoginValues(){
     var password = getTextValues("loginPassword", " Password");
 
 
-  /*  if(!phoneNumberValidation(username)){
+    if(!phoneNumberValidation(username)) {
+        sweetAlert("Please enter a valid phone number");
         return false;
     }
-*/
+
    // else {
         var attrs = {
             username:username,
@@ -199,7 +198,7 @@ function getTextValues(textName,alertValue){
         }else{
             if(i == textValues.length-1){
                 sweetAlert("Please enter your " + alertValue);
-                return false;
+                return ;
             }
         }
     }
@@ -208,32 +207,13 @@ function getTextValues(textName,alertValue){
 }
 
 
-function phoneNumberValidation(inputtxt) {
-    if(inputtxt.length){
-       // alert(inputtxt)
-        var phoneNo = /^[789]\d{9}$/;
-        if(inputtxt.match(phoneNo)) {
-            return true;
-        }
-        else {
-            sweetAlert("Please enter a valid phone number");
-            return false;
-        }
-    }
-
+function phoneNumberValidation(inputtxt){
+    var phoneNo = /^[789]\d{9}$/;
+    return phoneNo.test(inputtxt);
 }
 
 function emailValidation(inputtxt) {
-    if(inputtxt.length){
-        var email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-        if(inputtxt.match(email)) {
-            return true;
-        }
-        else {
-            sweetAlert("Please enter a valid email id");
-            return false;
-        }
-    }
-
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(inputtxt);
 }
 

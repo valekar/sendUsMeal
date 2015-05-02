@@ -44,12 +44,13 @@ Router.map(function(){
             },
             /*check if the user has been logged in*/
             onBeforeAction:function(){
-                if(!Meteor.userId()) {
+                if(Meteor.user()) {
                   //  console.log("No user loggedin");
-                   this.next();
+                   //this.next();
+                    this.redirect("/adminHome.htm");
                 } else {
                   //  console.log("User rediecting to adminHome.htm");
-                    this.redirect("/adminHome.htm");
+                    this.next()
                 }
             },
 
@@ -63,21 +64,21 @@ Router.map(function(){
 
             }
 
-        }),
+        })/*,
         this.route("/adminRegister.htm",{
             waitOn:function(){
                 return [Meteor.subscribe('userCheck')]
             },
-            onBeforeAction:function(){
+            //onBeforeAction:function(){
                 //check if atleast one user is there as the admin
-                if(!Admin.find()) {
+                //if(!Admin.find()) {
 
-                    this.next();
-                } else {
+                  //  this.next();
+                //} else {
                     //  console.log("User rediecting to adminLogin.htm");
-                    this.redirect("/adminLogin.htm");
-                }
-            },
+               //     this.redirect("/adminLogin.htm");
+             //   }
+           // },
             action:function(){
 
                 this.render('adminHeaderTemplate',{to:'headerAdminSection'});
@@ -86,7 +87,7 @@ Router.map(function(){
                 this.layout('AdministratorLayout');
             }
 
-        });
+        });*/
 
 });
 
