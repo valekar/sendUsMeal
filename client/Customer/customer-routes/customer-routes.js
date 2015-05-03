@@ -10,6 +10,7 @@ Router.map(function(){
               Meteor.subscribe('CustomerCompanies')
           ]
         },
+        fastRender: true,
         action:function(){
             /*show the adminHome.htm page*/
             this.render('CustomerHeaderTemplate', {to: 'headerSection'});
@@ -25,6 +26,7 @@ Router.map(function(){
                     Meteor.subscribe('CustomerMedias')
                 ]
             },
+            fastRender: true,
             action:function(){
                 /*show the adminHome.htm page*/
                 this.render('CustomerHeaderTemplate', {to: 'headerSection'});
@@ -49,6 +51,7 @@ Router.map(function(){
                     Meteor.subscribe('CustomerItemList',Session.get("currentSessionId"))
                 ]
             },
+            fastRender: true,
             data:function(){
                 //get items is a global func defined in cust-global
                 //passing north Indian category Id
@@ -66,6 +69,43 @@ Router.map(function(){
                 this.layout('CustomerLayout');
             }
         }),
+
+        this.route("/hand-picked-for-you",{
+            waitOn:function(){
+
+                Meteor.call("getSessionId", function(err, id) {
+                    Session.set("currentSessionId",id);
+                    //console.log(id);
+                });
+
+
+                return [
+                    Meteor.subscribe('CustomerItems'),
+                    Meteor.subscribe('CustomerCompanies'),
+                    Meteor.subscribe('CustomerMedias'),
+                    Meteor.subscribe('CustomerItemList',Session.get("currentSessionId"))
+                ]
+            },
+            fastRender: true,
+            data:function(){
+                //get items is a global func defined in cust-global
+                //passing north Indian category Id
+                //properties file defined in Customer global
+                tData ={
+                    handPickedItemsFromRoute:getItems(Properties.HandPickedCategoryId)
+                };
+                return tData;
+            },
+            action:function(){
+                /*show the adminHome.htm page*/
+                this.render('CustomerHeaderTemplate', {to: 'headerSection'});
+                this.render('CustomerHandPickedBodyTemplate', {to: 'bodySection'});
+                this.render('CustomerFooterTemplate', {to: 'footerSection'});
+                this.layout('CustomerLayout');
+            }
+        }),
+
+
         this.route("/order",{
             waitOn:function(){
               return [
@@ -75,6 +115,7 @@ Router.map(function(){
 
               ]
             },
+            fastRender: true,
             onBeforeAction:function(){
                 //redirect the user to the north
                 // indian items if nothing is present in the cart
@@ -105,6 +146,7 @@ Router.map(function(){
 
                 ]
             },
+            fastRender: true,
             action:function(){
                 /*show the adminHome.htm page*/
                 this.render('CustomerHeaderTemplate', {to: 'headerSection'});

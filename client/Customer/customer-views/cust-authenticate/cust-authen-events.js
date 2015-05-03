@@ -29,6 +29,7 @@ Template.CustomerRegisterTemplate.events({
                         sweetAlert("Signed In Successfully, Password has been sent to your mobile, Please Login using the same.");
                         //show the login template
                         Session.set('customerCurrentPage','CustomerLoginTemplate');
+                        //$('#LoginModal').modal('hide');
 
                     }
                 });
@@ -65,6 +66,7 @@ Template.CustomerForgotPassword.events({
             else{
                 sweetAlert("We have sent your password to your number");
                 Session.set('customerCurrentPage','CustomerLoginTemplate');
+                //$('#LoginModal').modal('hide');
 
             }
         });

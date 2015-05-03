@@ -7,8 +7,10 @@ Template.CustomerOrderBodyTemplate.helpers({
         var itemList = ItemList.find().fetch();
         var grandAmount =0;
         for(var i=0;i<itemList.length;i++){
-            grandAmount +=itemList[i].itemTotalPrice*itemList[i].itemQuantity;
+            grandAmount +=itemList[i].itemTotalPrice;
         }
+
+        console.log("The Grqand totoal :: " + grandAmount);
         Session.set("grandTotalAmount",grandAmount);
         return itemList;
     },

@@ -64,7 +64,7 @@ Router.map(function(){
 
             }
 
-        })/*,
+        }),
         this.route("/adminRegister.htm",{
             waitOn:function(){
                 return [Meteor.subscribe('userCheck')]
@@ -87,7 +87,7 @@ Router.map(function(){
                 this.layout('AdministratorLayout');
             }
 
-        });*/
+        });
 
 });
 

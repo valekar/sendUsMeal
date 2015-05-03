@@ -1,7 +1,7 @@
-Template.CustomerNorthIndianBodyTemplate.events({
+Template.CustomerHandPickedBodyTemplate.events({
     'click #addNorthFood':function(event,templ){
         //get the current item{ID}Quantity
-        // this is set in the rendered template (CustomerNorthIndianBodyTemplate)
+        // this is set in the rendered template (CustomerHandPickedBodyTemplate)
         Session.set("item"+this._id+"Quantity",Session.get("item"+this._id+"Quantity")+1);
 
         var quantity = Session.get("item"+this._id+"Quantity");
@@ -49,12 +49,11 @@ Template.CustomerNorthIndianBodyTemplate.events({
 
         });
     },
-
     'click #clear':function(e,templ){
-        e.preventDefault();
-       // console.log("Clear");
+         e.preventDefault();
+    //Session.keys = {};
         location.reload();
-    }
+}
 });
 
 

@@ -18,3 +18,5 @@ reactive-var
 accolver:twilio-meteor
 kevohagan:sweetalert
 anti:fake
+spiderable
+meteorhacks:fast-render

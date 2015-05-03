@@ -1,5 +1,5 @@
 /*Retrieve all the items listed to the body template of customer*/
-Template.CustomerNorthIndianBodyTemplate.helpers({
+Template.CustomerHandPickedBodyTemplate.helpers({
 
     'itemList':function(){
         var itemList = ItemList.find().fetch();
@@ -35,13 +35,13 @@ Template.CustomerNorthIndianBodyTemplate.helpers({
 });
 
 
-Template.CustomerNorthIndianBodyTemplate.rendered = function() {
+Template.CustomerHandPickedBodyTemplate.rendered = function() {
     /**
      *
      * this is used to remove & delete the items from the session cart
      */
     // got this data from router
-    var items = this.data && this.data.northItemsFromRoute;
+    var items = this.data && this.data.handPickedItemsFromRoute;
    // console.log(items);
     for(var i=0;i<items.length;i++){
         Session.set("item"+items[i]._id+"Quantity",0);
@@ -61,7 +61,7 @@ Template.CustomerNorthIndianBodyTemplate.rendered = function() {
     /**
      * used to hide/show the Order button
      */
-    Session.set("NoOfItemListInCart",this.data.northItemsFromRoute.length);
+    Session.set("NoOfItemListInCart",this.data.handPickedItemsFromRoute.length);
     if(!Meteor.user() && Session.get("deliveredPlaces") != true){
         //used to alert the user when he clicks on the north indian food items
         $("#deliveredPlaces").modal('show');

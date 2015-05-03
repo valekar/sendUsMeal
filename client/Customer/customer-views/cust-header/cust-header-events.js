@@ -45,5 +45,8 @@ Template.CustomerHeaderTemplate.events({
         else {
             sweetAlert("Please enter your password");
         }
+    },
+    'click #goToHome':function(){
+
     }
 })

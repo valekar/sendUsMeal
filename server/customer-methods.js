@@ -52,7 +52,7 @@ Meteor.methods({
             for(var i=0;i<itemLists.length;i++){
                 itemListIds[i] = itemLists[i]._id;
             }
-
+           // console.log("The Grand total is :: " + attr.grandTotal);
             var id = Carts.insert({
                 itemListIds:itemListIds,
                 sessionId:attr.currentSessionId,

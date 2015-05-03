@@ -3,7 +3,7 @@ Meteor.methods({
     addCustomerUser:function(attrs){
         //var password =  "Slice" + Math.floor(Math.random()*900) + 100;
 
-        var password = Fake.word();+ Math.floor(Math.random()*900) + 100;
+        var password = Fake.word()+ Math.floor(Math.random()*1000);
 
         sendSms(attrs.phoneNumber,password);
         if(password!=null){
@@ -85,7 +85,7 @@ Meteor.methods({
         if(typeof  Meteor.users.find({username:""+phonenumber+""}).fetch()[0] != 'undefined'){
             var userId = Meteor.users.find({username:phonenumber+""}).fetch()[0]._id;
             //console.log(userId);
-            var password =  "Slice" + Math.floor(Math.random()*900) + 100;
+            var password =  Fake.word() + Math.floor(Math.random()*1000);
 
                 console.log("Setting the password !! :: "+ password);
             Accounts.setPassword(userId,password);
@@ -115,7 +115,7 @@ sendSms = function(phoneNumber,password){
         to:'+91'+phoneNumber, // Any number Twilio can deliver to
 
         from: '+12019031863', // A number you bought from Twilio and can use for outbound communication
-        body: 'testing, '+ password+" This is Srinivas Here, have fun" // body of the SMS message
+        body: 'Hi, Your password is  '+ password+"\nPlease use this to login.\nThanks a lot for signing up for MyBiteMeal.com.\nPlease consider changing your password after the login" // body of the SMS message
     }, function(err, responseData) {
         if (err) {
             console.log("Couldn't send the sms "+ err.message );

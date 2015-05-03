@@ -167,7 +167,7 @@
     padding: 4% 5%;
     padding-top: 1%;
     position: relative;
-
+    margin-bottom: -1.1%;
 /*background-image: url("bg_header.jpg") ;*/
 }
 
@@ -177,11 +177,43 @@
 
 
 .custom-lander-body{
-    background-image: url("background.jpg");
-    padding: 3% 0%;
-    position: relative;
-    margin-top: -1.2%;
+   /* background-image: url("background.jpg");*/
+    background-color: black;
+   /* padding: 3% 0%;*/
+    /*position: relative;*/
+    width: 100%; /* for example */
+    margin: auto;
+
 }
+
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img{
+    width: 100%; /* use this, or not */
+    margin: auto;
+}
+
+.carousel-image{
+    max-height: 750px;
+
+}
+
+.carousel-caption{
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 5%;
+    padding: inherit;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.carousel-caption h1,h2,h3,h4,h5,h6,p {
+    color: white;
+}
+
+.carousel-caption h1 {
+    font-size: 500%;
+}
+
 
 .custom-nav{
     position: relative;
@@ -195,6 +227,7 @@
 
 
 }
+
 
 
 
@@ -352,7 +385,6 @@
 .custom-get-started{
     padding-bottom: 2%;
     padding-top: 4%;
-    padding-left: 8%;
     color: #244755;
 }
 
@@ -365,4 +397,20 @@
 
 .custom-about-us{
     font-size: 150%;
+
+}
+
+/*Iron router color*/
+#iron-router-progress {
+    background-color : #ff933f;
+    box-shadow       : 100px 100px 100px black;
+}
+
+#iron-router-progress.spinner:before {
+    border-color : #ff933f;
+}
+
+
+.custom-circle{
+    background-color: white;
 }
