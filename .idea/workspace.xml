@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9680193d-5c6d-4774-814d-8842750c8da2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-handpicked-food/cust-hand-picked-food-events.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-handpicked-food/cust-hand-picked-food-helpers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-handpicked-food/cust-hand-picked-food-index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/layout/CustomerLayout.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/layout/CustomerLayout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Miscellaneous/about-us.html" afterPath="$PROJECT_DIR$/client/Miscellaneous/about-us.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Administrator/admin-routes/admin-routes.js" afterPath="$PROJECT_DIR$/client/Administrator/admin-routes/admin-routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-all-orders.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-all-orders.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-authen-events.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-authen-events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-global/cust-global-properties.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-global/cust-global-properties.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header-events.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header-events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-helpers.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-home.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-login.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-events.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-helpers.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-index.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-north-indian/cust-north-indian-index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-helpers.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-helpers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/css/custom.css" afterPath="$PROJECT_DIR$/lib/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/customer-methods.js" afterPath="$PROJECT_DIR$/server/customer-methods.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-routes/customer-routes.js" afterPath="$PROJECT_DIR$/client/Customer/customer-routes/customer-routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/customer-user.js" afterPath="$PROJECT_DIR$/server/customer-user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/packages" afterPath="$PROJECT_DIR$/.meteor/packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/versions" afterPath="$PROJECT_DIR$/.meteor/versions" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sendUsMeal.iws" />
@@ -90,6 +67,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3150" max-vertical-offset="7704">
+              <caret line="189" column="2" selection-start-line="189" selection-start-column="0" selection-end-line="191" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="cust-order-helpers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-helpers.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -135,16 +122,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="22122">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cust-events.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-events.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="198">
-              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -201,13 +178,13 @@
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header.html" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/layout/CustomerLayout.html" />
         <option value="$PROJECT_DIR$/client/Customer/customer-routes/customer-routes.js" />
-        <option value="$PROJECT_DIR$/lib/css/custom.css" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-helpers.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-home.html" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header-events.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-authen-events.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-login.html" />
         <option value="$PROJECT_DIR$/server/customer-user.js" />
+        <option value="$PROJECT_DIR$/lib/css/custom.css" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-global/cust-global-properties.js" />
       </list>
     </option>
@@ -274,6 +251,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sendUsMeal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sendUsMeal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sendUsMeal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -781,13 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/Customer/customer-routes/customer-routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -904,6 +892,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="3168">
           <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3150" max-vertical-offset="7704">
+          <caret line="189" column="2" selection-start-line="189" selection-start-column="0" selection-end-line="191" selection-end-column="3" />
           <folding />
         </state>
       </provider>
