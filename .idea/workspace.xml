@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9680193d-5c6d-4774-814d-8842750c8da2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/layout/CustomerLayout.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/layout/CustomerLayout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-global/cust-global-properties.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-global/cust-global-properties.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-helpers.js" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-helpers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-home.html" afterPath="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/css/custom.css" afterPath="$PROJECT_DIR$/lib/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sendUsMeal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,21 +70,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3150" max-vertical-offset="7704">
-              <caret line="185" column="21" selection-start-line="185" selection-start-column="21" selection-end-line="185" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.7880184" vertical-offset="2970" max-vertical-offset="7704">
+              <caret line="184" column="20" selection-start-line="184" selection-start-column="20" selection-end-line="184" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cust-home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cust-helpers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-helpers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cust-home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3980344" vertical-offset="1242" max-vertical-offset="3600">
-              <caret line="78" column="82" selection-start-line="78" selection-start-column="82" selection-end-line="78" selection-end-column="82" />
+            <state vertical-scroll-proportion="-10.0" vertical-offset="108" max-vertical-offset="3600">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -113,16 +124,6 @@
         <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header-helpers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cust-order-rendered.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-rendered.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="22122">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -179,15 +180,15 @@
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-handpicked-food/cust-hand-picked-food-events.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header.html" />
         <option value="$PROJECT_DIR$/client/Customer/customer-routes/customer-routes.js" />
-        <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-helpers.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-header/cust-header-events.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-authen-events.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-authenticate/cust-login.html" />
         <option value="$PROJECT_DIR$/server/customer-user.js" />
-        <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-global/cust-global-properties.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/layout/CustomerLayout.html" />
-        <option value="$PROJECT_DIR$/lib/css/custom.css" />
+        <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-global/cust-global-properties.js" />
+        <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-helpers.js" />
         <option value="$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-home.html" />
+        <option value="$PROJECT_DIR$/lib/css/custom.css" />
       </list>
     </option>
   </component>
@@ -241,10 +242,6 @@
               <option name="myItemId" value="sendUsMeal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -253,6 +250,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sendUsMeal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -805,13 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-order/cust-order-events.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -892,14 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-global/cust-global-properties.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/layout/CustomerLayout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="450">
@@ -908,18 +894,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/css/custom.css">
+    <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-helpers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3150" max-vertical-offset="7704">
-          <caret line="185" column="21" selection-start-line="185" selection-start-column="21" selection-end-line="185" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-global/cust-global-properties.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/Customer/customer-views/cust-home/cust-home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3980344" vertical-offset="1242" max-vertical-offset="3600">
-          <caret line="78" column="82" selection-start-line="78" selection-start-column="82" selection-end-line="78" selection-end-column="82" />
+        <state vertical-scroll-proportion="-10.0" vertical-offset="108" max-vertical-offset="3600">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7880184" vertical-offset="2970" max-vertical-offset="7704">
+          <caret line="184" column="20" selection-start-line="184" selection-start-column="20" selection-end-line="184" selection-end-column="20" />
           <folding />
         </state>
       </provider>
