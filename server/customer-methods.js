@@ -94,3 +94,15 @@ Meteor.methods({
         }
     }
 });
+
+
+Meteor.methods({
+    'insertFeedback':function(attrs){
+        Feedbacks.insert({
+            userEmail:attrs.userEmail,
+            type:attrs.type,
+            userFeedback:attrs.userFeedback,
+            created_at:attrs.created_at
+        })
+    }
+})

@@ -1,0 +1,42 @@
+<template name = "FeedBackTemplate">
+
+
+    <div class="container">
+    	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+
+    	</div>
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            <form action="" method="post" role="form">
+                <legend>Feed Back </legend>
+
+                <div class="form-group">
+                    <label for="">Email Id</label>
+                    <input type="text" class="form-control" name="" id="userEmail" placeholder="Enter your Email Id">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Select a feedback type</label>
+                    <select name = "selectType" id = "feedBackType" class="form-control input-lg">
+                        <option value="0">Select an issue type</option>
+                        <option value="Technical">Technical</option>
+                        <option value="Food">Food</option>
+                        <option value="Delivery">Delivery</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Your Feed Back</label>
+                    <textarea class="form-control" name="" id="userFeedback" placeholder="Your feed back" rows="4" cols="20"></textarea>
+                </div>
+
+                <button type="submit" id="getFeedBack" class="btn btn-primary">Give Feedback</button>
+                <h5 class="custom-color">(We thank you for taking your time and giving us your feedback)</h5>
+            </form>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+
+        </div>
+    </div>
+
+
+</template>

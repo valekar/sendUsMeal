@@ -27,6 +27,7 @@ Router.map(function(){
                 ]
             },
             fastRender: true,
+            cache:true,
             action:function(){
                 /*show the adminHome.htm page*/
                 this.render('CustomerHeaderTemplate', {to: 'headerSection'});
@@ -171,10 +172,10 @@ Router.map(function(){
                 this.layout('CustomerLayout');
             }
         }),
-        this.route("/terms-and-conditions",{
+        this.route("/feedback",{
             action:function(){
                 this.render('CustomerHeaderTemplate', {to: 'headerSection'});
-                this.render('TermsAndConditionsTemplate', {to: 'bodySection'});
+                this.render('FeedBackTemplate', {to: 'bodySection'});
                 this.render('CustomerFooterTemplate', {to: 'footerSection'});
                 this.layout('CustomerLayout');
             }
@@ -182,3 +183,4 @@ Router.map(function(){
 
 
 });
+

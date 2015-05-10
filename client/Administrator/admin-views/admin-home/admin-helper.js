@@ -21,7 +21,7 @@ Template.adminLoggedInTemplate.helpers({
 /*When the user logs into the system*/
 Template.adminLoggedInTemplate.rendered = function(){
     /*Autmatically show the Items page*/
-    $("#items").trigger('click');
+    $("#orders").trigger('click');
 
     $('ul.nav-pills li a').click(function (e) {
         $('ul.nav-pills li.active').removeClass('active')

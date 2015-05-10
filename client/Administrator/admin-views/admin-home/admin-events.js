@@ -109,6 +109,10 @@ Template.adminLoggedInTemplate.events({
     'click #orders':function(event,templ){
         event.preventDefault();
         Session.set("currentPage","AdminOrdersIndexTemplate");
+    },
+    'click #feedBacks':function(event,templ){
+        event.preventDefault();
+        Session.set("currentPage","AdminFeedBackTemplate");
     }
 
 });

@@ -57,8 +57,7 @@
                         <button type="submit" class="btn btn-danger" id = "cancelOrder">Cancel</button>
 					</td>
                     {{else}}
-                        <strong>Order has been already dispatched<br></strong>
-                        <strong>Please call the Administration for more info</strong>
+                       {{{orderMessage}}}
                     {{/if}}
                 </tr>
 				{{/each}}

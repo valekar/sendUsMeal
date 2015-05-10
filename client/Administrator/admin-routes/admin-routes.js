@@ -14,7 +14,8 @@ Router.map(function(){
               Meteor.subscribe("Orders",Meteor.userId()),
               Meteor.subscribe('ItemList',Meteor.userId()),
               Meteor.subscribe('Carts',Meteor.userId()),
-              Meteor.subscribe('Users',Meteor.userId())
+              Meteor.subscribe('Users',Meteor.userId()),
+              Meteor.subscribe('FeedBacks',Meteor.userId())
           ]}
             else return;
         },
@@ -64,7 +65,7 @@ Router.map(function(){
 
             }
 
-        }),
+        })/*,
         this.route("/adminRegister.htm",{
             waitOn:function(){
                 return [Meteor.subscribe('userCheck')]
@@ -87,7 +88,7 @@ Router.map(function(){
                 this.layout('AdministratorLayout');
             }
 
-        });
+        });*/
 
 });
 

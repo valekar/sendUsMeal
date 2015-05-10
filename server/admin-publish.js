@@ -7,14 +7,14 @@ Meteor.publish('userCheck',function(){
 
 Meteor.publish('Items',function(id){
     if(id === Meteor.users.findOne({profile:{admin:true}})._id){
-        return Items.find();
+        return Items.find({},{reactive: false});
     }
 });
 
 Meteor.publish('Categories',function(id){
     /*Check if the user is admin*/
     if(id === Meteor.users.findOne({profile:{admin:true}})._id){
-        return Categories.find();
+        return Categories.find({},{reactive: false});
     }
 });
 
@@ -22,14 +22,14 @@ Meteor.publish('Categories',function(id){
 Meteor.publish('Medias',function(id){
     /*Check if the user is admin*/
     if(id === Meteor.users.findOne({profile:{admin:true}})._id) {
-        return Medias.find();
+        return Medias.find({},{reactive: false});
     }
 });
 
 Meteor.publish("Companies",function(id){
     /*Check if the user is admin*/
     if(id === Meteor.users.findOne({profile:{admin:true}})._id) {
-        return Companies.find();
+        return Companies.find({},{reactive: false});
     }
 });
 
@@ -57,6 +57,13 @@ Meteor.publish('Carts',function(id){
 Meteor.publish('Users',function(id){
     /*Check if the user is admin*/
     if(id === Meteor.users.findOne({profile:{admin:true}})._id) {
-        return Meteor.users.find();
+        return Meteor.users.find({},{reactive: false});
+    }
+});
+
+Meteor.publish('FeedBacks',function(id){
+    /*Check if the user is admin*/
+    if(id === Meteor.users.findOne({profile:{admin:true}})._id) {
+        return Feedbacks.find();
     }
 });

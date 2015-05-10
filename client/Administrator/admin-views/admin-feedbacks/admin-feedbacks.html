@@ -1,0 +1,23 @@
+<template name="AdminFeedBackTemplate">
+    <table class="table table-hover">
+    	<thead>
+    		<tr>
+    			<th>UserEmail</th>
+                <th>Type</th>
+                <th>FeedBack</th>
+                <th>Created At</th>
+    		</tr>
+    	</thead>
+    	<tbody>
+
+            {{#each feedBacks}}
+    		<tr>
+    			<td>{{type}}</td>
+                <td>{{userEmail}}</td>
+                <td>{{userFeedback}}</td>
+                <td>{{created_at}}</td>
+    		</tr>
+            {{/each}}
+    	</tbody>
+    </table>
+</template>

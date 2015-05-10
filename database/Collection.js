@@ -58,3 +58,5 @@ Companies = new Mongo.Collection('companies');
 
 
 Orders = new Mongo.Collection('orders');
+
+Feedbacks = new Mongo.Collection('feedBacks');

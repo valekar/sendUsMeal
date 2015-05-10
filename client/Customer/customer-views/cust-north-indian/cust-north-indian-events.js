@@ -52,8 +52,8 @@ Template.CustomerNorthIndianBodyTemplate.events({
 
     'click #clear':function(e,templ){
         e.preventDefault();
-       // console.log("Clear");
-        location.reload();
+        history.go(0);
+
     }
 });
 

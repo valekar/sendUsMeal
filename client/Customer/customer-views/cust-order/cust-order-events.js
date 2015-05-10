@@ -69,6 +69,7 @@ Template.CustomerAllOrderBodyTemplate.events({
                     }
                     else{
                         sweetAlert("Your order has been cancelled");
+                       // Session.set("orderMessage","You have cancelled your order");
                     }
                 });
             }else {

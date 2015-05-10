@@ -7,15 +7,21 @@
                 <h4>[Make Your Own food Combos]</h4>
             </div>
             {{#if currentUser}}
-
+                <div class="pull-right">
+                    <h4 >
+                        <i class="fa fa-phone fa-1x"></i>
+                        +91-888-0470-988
+                    </h4>
+                    <h4 class="pull-right">Partnered with IFC</h4>
+                </div>
             {{else}}
                 <div class="pull-right">
-
                     <h4>
                      <i class="fa fa-phone fa-1x"></i>
-                        +91-99-01336755
+                        +91-888-0470-988
                     </h4>
-                    <button class="btn btn-primary" data-toggle="modal"  data-target="#LoginModal">Login</button>
+                    <h4 > Partnered with IFC</h4>
+                    <button class="btn btn-primary " data-toggle="modal"  data-target="#LoginModal">Login</button>
                 </div>
             {{/if}}
 
@@ -69,7 +75,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    <h4 class="modal-title" id="myModalLabel">Login</h4>
                 </div>
                 <div class="modal-body">
                     {{> UI.dynamic template=currentShowingPageTemplate}}

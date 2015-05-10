@@ -35,7 +35,22 @@ Meteor.methods({
             );
 
             //this.setUserId(user_id);
-
+            if(user_id){
+                this.unblock();
+                var mycustomer = new Mailgun(MailOptions);
+                mycustomer.send({
+                    'to': 'srinivas.valekar@gmail.com',
+                    'from':  'no-reply@mybitefood.in',
+                    'html': Handlebars.templates['mail-template']({name: 'Srini'}),
+                    //'text': 'This is a test',
+                    'subject': 'testSubject',
+                    'tags': [
+                        'some',
+                        'test',
+                        'tags'
+                    ]
+                });
+            }
             return userObject.password;
         }else {
             throw new Meteor.Error("Couldnt register your number, number already exists, Please contact Administrator");
@@ -90,7 +105,7 @@ Meteor.methods({
                 console.log("Setting the password !! :: "+ password);
             Accounts.setPassword(userId,password);
             console.log("Password :: " + password);
-            sendSms(phonenumber,password);
+           // sendSms(phonenumber,password);
         }
     },
 

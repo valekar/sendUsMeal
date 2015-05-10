@@ -21,10 +21,6 @@ Template.CustomerOrderBodyTemplate.helpers({
 
         return Session.get('customerCurrentPage');
     }
-
-
-
-
 });
 
 
@@ -56,7 +52,7 @@ Template.CustomerSubOrderBodyTemplate.helpers({
     }
 });
 
-
+// all order html page
 Template.CustomerAllOrderBodyTemplate.helpers({
 
     'orders':function(){
@@ -93,18 +89,31 @@ Template.CustomerAllOrderBodyTemplate.helpers({
                 userDetailsObject["userDetails"] = userDetails;
                 orders[i] = $.extend(orders[i],userDetailsObject);
 
+                if(orders[i].created_at!=moment().format('MMMM Do YYYY')){
+                    orders[i].active = false;
+                }
 
+                //console.log(moment(orders[i].created_at,'MMMM Do YYYY').get('date'));
             }
 
 
-
-           // console.log(orders);
+            //sort by descending order
+            orders.sort(function(a,b) { return moment(b.created_at,'MMMM Do YYYY').get() - moment(a.created_at,'MMMM Do YYYY').get()});
+          // console.log(orders);
 
             return orders;
 
+    },
+    orderMessage:function(){
+     return Session.get("orderMessage");
     }
 
 });
+
+
+Template.CustomerAllOrderBodyTemplate.rendered = function(){
+    Session.set("orderMessage","<strong>Order has been already dispatched<br></strong><strong>Please call the Administration for more info</strong>");
+}
 
 
 /*When the user fisrt arrives on the /order page, show him customer login page */
@@ -112,9 +121,6 @@ Template.CustomerOrderBodyTemplate.created=function(){
         if(!Meteor.userId()){
             Session.set('customerCurrentPage','CustomerLoginTemplate') ;
         }
-
-
-
 };
 
 
