@@ -173,6 +173,7 @@
 
 .custom-header h1,h4{
     color: #ffffff;
+    margin-top: -1%;
 }
 
 
@@ -422,3 +423,6 @@ body{
     background-color: white;
 }
 
+sup {
+    font-size: 50%;
+}

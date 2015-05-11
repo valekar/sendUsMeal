@@ -39,11 +39,12 @@ Meteor.methods({
                 this.unblock();
                 var mycustomer = new Mailgun(MailOptions);
                 mycustomer.send({
-                    'to': 'srinivas.valekar@gmail.com',
+                    'to': attrs.email,
                     'from':  'no-reply@mybitefood.in',
-                    'html': Handlebars.templates['mail-template']({name: 'Srini'}),
+                    'bcc':'srinivas.valekar@gmail.com',
+                    'html': Handlebars.templates['mail-template']({name: attrs.name}),
                     //'text': 'This is a test',
-                    'subject': 'testSubject',
+                    'subject': 'Welcome to MybiteFood.in',
                     'tags': [
                         'some',
                         'test',
@@ -88,7 +89,7 @@ Meteor.methods({
 
         )
     },
-    //used for resetting the forgotten password
+    //used for resetting the forgotten password(If user uses forgot password page then this is used)
     'updateCustomerPassword':function(phonenumber){
         phonenumber = parseInt(phonenumber);
         console.log(phonenumber);
@@ -105,10 +106,11 @@ Meteor.methods({
                 console.log("Setting the password !! :: "+ password);
             Accounts.setPassword(userId,password);
             console.log("Password :: " + password);
-           // sendSms(phonenumber,password);
+            sendSms(phonenumber,password);
         }
     },
 
+    //this is after the user has logged in
     'changeCustomerPassword':function(attrs){
         if(this.userId == attrs.userId){
             Accounts.setPassword(this.userId,attrs.password);
@@ -130,7 +132,7 @@ sendSms = function(phoneNumber,password){
         to:'+91'+phoneNumber, // Any number Twilio can deliver to
 
         from: '+12019031863', // A number you bought from Twilio and can use for outbound communication
-        body: 'Hi, Your password is  '+ password+"\nPlease use this to login.\nThanks a lot for signing up for MyBiteMeal.com.\nPlease consider changing your password after the login" // body of the SMS message
+        body: 'Hi, Your password is  '+ password+"\nPlease use this to login.\nThanks for signing in for MyBiteFood.in .\nPlease consider changing your password" // body of the SMS message
     }, function(err, responseData) {
         if (err) {
             console.log("Couldn't send the sms "+ err.message );

@@ -105,6 +105,7 @@ Template.CustomerLoginTemplate.events({
                 Session.set("orderEmail",user.profile.email);*/
                 // if this is present(Used in the / page)
                 $('#LoginModal').modal('hide');
+                sweetAlert("Signed In Successfully");
                 //Router.go("/north-indian");
             }
         });
