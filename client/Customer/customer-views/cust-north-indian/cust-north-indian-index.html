@@ -1,104 +1,128 @@
 <template name = "CustomerNorthIndianBodyTemplate">
 
-
-
-    <div class="custom-food-body"  data-spy="scroll" data-target="#myScrollspy">
-        <!--North Dishes-->
-        <div class="container">
-            <!--Start of row-->
-            <div class="row">
-                <!--Header-->
-                <div class="panel panel-default">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-lg-3">
+                <div class="panel panel-primary" data-spy="affix" id = "myScrollspy">
                     <div class="panel-heading">
-                        <div class="text-center">
-                            <h1>North Indian Dishes</h1>
-                        </div>
+                        <h3 class="panel-title text-center">Your Orders</h3>
                     </div>
-                   <!--Start of panel-->
                     <div class="panel-body">
-                        <section class="cart-section">
-                        <!--Cart place-->
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" >
-                            <div class="panel panel-primary" data-spy="affix" id = "myScrollspy">
-                            	  <div class="panel-heading">
-                            			<h3 class="panel-title text-center">Your Orders</h3>
-                            	  </div>
-                            	  <div class="panel-body my-cart">
-                                      <table class="table table-hover table-bordered text-center">
-                                          <thead>
-                                          <tr>
-                                              <th>Food</th>
-                                              <th>Quantity</th>
-                                              <th>Price</th>
-                                          </tr>
-                                          </thead>
-                                          <tbody>
-                                          {{#each itemList}}
-                                              <tr>
-                                                  <td>{{itemName}}</td>
-                                                  <td>{{itemQuantity}}</td>
-                                                  <td>{{itemTotalPrice}}</td>
-                                              </tr>
-                                          {{/each}}
-                                          <tr>
-                                              <td colspan="3"></td>
-                                          </tr>
-                                          <tr>
-
-                                              <td colspan="2"><strong>Grand Total</strong> </td>
-                                              <td><i class="fa fa-rupee fa-2x"> </i> {{grandTotalAmount}}</td>
-                                          </tr>
-                                          {{#if showOrderButton}}
-                                          <tr>
-                                              <td colspan="3" class="text-center">
-                                                  <button class="btn btn-primary" id = "orderFood">Order</button>
-                                                  <button class="btn btn-danger" id = "clear">Clear Cart</button>
-                                              </td>
-
-                                          </tr>
-                                          {{/if}}
-
-                                          </tbody>
-
-                                      </table>
-                            	  </div>
-                            </div>
-                        </div>
-                        </section>
-                        <section class="items">
-                        <!--Each item styling-->
-                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                            {{#each northItemsFromRoute}}
-                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 well well-lg text-center">
-                                      <!--Start of panel-->
-                                   	  <div class="panel-heading">
-                                          <span class="my-food-name-price">{{name}}</span>
-                                          <div class="pull-right ">
-                                              <i class="fa fa-rupee fa-2x"></i>
-                                              <span class="my-food-name-price">{{price}}</span>
-                                          </div>
-                                   	  </div>
-                                   	  <div class="panel-body">
-                                          <img src="{{url}}" alt="alt-text" class=" img-rounded img-thumbnail my-thumbnail"/>
-                                   	  </div>
-                                        <div class="">
-                                            <button class="btn btn-primary" id = "addNorthFood">Add</button>
-                                            <button class="btn btn-danger " id = "removeNorthFood">Remove</button>
-                                        </div>
-                                    <!--End of panel-->
-                                </div>
+                        <table class="table table-hover table-bordered text-center">
+                            <thead>
+                            <tr>
+                                <th>Food</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each itemList}}
+                                <tr>
+                                    <td>{{itemName}}</td>
+                                    <td>{{itemQuantity}}</td>
+                                    <td>{{itemTotalPrice}}</td>
+                                </tr>
                             {{/each}}
-                        </div>
-                        <!--End of styling the images -->
-                        </section>
+                            <tr>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+
+                                <td colspan="2"><strong>Grand Total</strong> </td>
+                                <td><i class="fa fa-rupee fa-2x"> </i> {{grandTotalAmount}}</td>
+                            </tr>
+                            {{#if showOrderButton}}
+                                <tr>
+                                    <td colspan="3" class="text-center">
+                                        <button class="btn btn-primary" id = "orderFood">Order</button>
+                                        <button class="btn btn-danger" id = "clear">Clear Cart</button>
+                                    </td>
+
+                                </tr>
+                            {{/if}}
+
+                            </tbody>
+
+                        </table>
                     </div>
-                    <!--End of panel-->
                 </div>
             </div>
-            <!--End of row-->
+
+            <div class=" col-md-9 col-lg-9">
+                <div id = "isotope-container">
+                    {{#each northItemsFromRoute}}
+                        <div class="isotope-item hidden-sm hidden-xs">
+                            <div class="panel panel-default">
+                                <!--Start of panel-->
+                                <div class="panel-heading">
+                                    <span class="hidden-sm hidden-xs my-food-name-price">{{name}}</span>
+                                    <span class="hidden-md hidden-lg">{{name}}</span>
+                                    <div class="pull-right ">
+                                        <i class="fa fa-rupee fa-2x"></i>
+                                        <span class="hidden-sm hidden-xs my-food-name-price">{{price}}</span>
+                                        <span class="hidden-lg hidden-md">{{price}}</span>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="/background.jpg" alt="alt-text" class="img-responsive"/>
+                                </div>
+                                <div class="text-center hidden-xs hidden-sm">
+                                    <button class="btn btn-primary" id = "addNorthFood">Add</button>
+                                    <button class="btn btn-danger " id = "removeNorthFood">Remove</button>
+                                </div>
+
+                                <div class="text-center hidden-lg hidden-md">
+                                    <button class="btn btn-primary btn-sm" id = "addNorthFood">Add</button>
+                                    <button class="btn btn-danger btn-sm" id = "removeNorthFood">Remove</button>
+                                </div>
+
+                                <!--End of panel-->
+                            </div>
+                        </div>
+
+
+                        <div class="isotope-item-sm hidden-lg hidden-md">
+                            <div class="panel panel-default">
+                                <!--Start of panel-->
+                                <div class="panel-heading">
+                                    <span class="hidden-sm hidden-xs my-food-name-price">{{name}}</span>
+                                    <span class="hidden-md hidden-lg">{{name}}</span>
+                                    <div class="pull-right ">
+                                        <i class="fa fa-rupee fa-2x"></i>
+                                        <span class="hidden-sm hidden-xs my-food-name-price">{{price}}</span>
+                                        <span class="hidden-lg hidden-md">{{price}}</span>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="/background.jpg" alt="alt-text" class="img-responsive"/>
+                                </div>
+                                <div class="text-center hidden-xs hidden-sm">
+                                    <button class="btn btn-primary" id = "addNorthFood">Add</button>
+                                    <button class="btn btn-danger " id = "removeNorthFood">Remove</button>
+                                </div>
+
+                                <div class="text-center hidden-lg hidden-md">
+                                    <button class="btn btn-primary btn-sm" id = "addNorthFood">Add</button>
+                                    <button class="btn btn-danger btn-sm" id = "removeNorthFood">Remove</button>
+                                </div>
+
+                                <!--End of panel-->
+
+                            </div>
+                        </div>
+
+
+                    {{/each}}
+                </div>
+
+            </div>
         </div>
+        <!--row-->
     </div>
-    <!--End of custom-food-body-->
+    <!--container fluid-->
+
+
 
 
     <div class="modal fade" id="deliveredPlaces" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

@@ -54,9 +54,16 @@ Template.CustomerNorthIndianBodyTemplate.rendered = function() {
 
     $("#myScrollspy").affix({
         offset: {
-            top: 330
+            top: 200
         }
     });
+
+
+    var $affix = $("#myScrollspy"),
+        $parent = $affix.parent(),
+        resize = function() { $affix.width($parent.width()); };
+    $(window).resize(resize);
+    resize();
 
     /**
      * used to hide/show the Order button
@@ -68,7 +75,13 @@ Template.CustomerNorthIndianBodyTemplate.rendered = function() {
         Session.set("deliveredPlaces",true);
     }
 
+    var $container = $('#isotope-container');
+    // init
+    $container.isotope({
+        // set columnWidth a fraction of the container width
 
+
+    });
 
 };
 

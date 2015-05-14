@@ -277,11 +277,7 @@ body{
 #myScrollspy.affix {
     position: fixed;
     top: 0px;
-    width: 14.5%;
     z-index:10;
-    margin-left: -0.75%;
-    padding-left: -3%;
-    margin-top:-1%;
 }
 
 #myNavSpy.affix{
@@ -289,7 +285,7 @@ body{
     top: 0px;
     width: 17%;
     z-index:10;
-    margin-left: -1.5%;
+
 
  }
 
@@ -425,4 +421,19 @@ body{
 
 sup {
     font-size: 50%;
+}
+
+
+.isotope-item{
+    width:25%;
+    padding-bottom:1%;
+}
+
+.isotope-item-sm {
+    width:100%;
+    padding-bottom: 1%;
+}
+
+.isotope-item.w2{
+    width:50%;
 }
