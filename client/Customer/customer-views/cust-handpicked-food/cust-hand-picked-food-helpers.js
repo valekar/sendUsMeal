@@ -52,11 +52,54 @@ Template.CustomerHandPickedBodyTemplate.rendered = function() {
      * this is used to affix the cart if the user scrolls down
      */
 
+
+    /*mobile*/
+    $("#myScrollspy-sm").affix({
+        offset: {
+            top: 200
+        }
+
+    });
+    var $affix = $("#myScrollspy-sm"),
+        $parent = $affix.parent(),
+
+        resize = function() { $affix.width($parent.width());
+        };
+    $(window).resize(resize);
+    resize();
+
+
+    $("#myScrollspy-sm").on("affixed.bs.affix",function(e){
+        $("#collapseOrder").collapse('hide');
+    });
+
+    $("#myScrollspy-sm").on("affixed-top.bs.affix",function(e){
+        $("#collapseOrder").collapse('show');
+    });
+
+
+    /*mobile*/
+
+
+
+
+    /*desktop*/
     $("#myScrollspy").affix({
         offset: {
-            top: 330
+            top: 200
         }
     });
+
+
+    var $affix = $("#myScrollspy"),
+        $parent = $affix.parent(),
+        resize = function() { $affix.width($parent.width()); };
+    $(window).resize(resize);
+    resize();
+
+    /*desktop*/
+
+
 
     /**
      * used to hide/show the Order button
@@ -68,7 +111,17 @@ Template.CustomerHandPickedBodyTemplate.rendered = function() {
         Session.set("deliveredPlaces",true);
     }
 
+    var $container = $('#isotope-container');
+    // init
+    $container.isotope({
+        // set columnWidth a fraction of the container width
+        itemSelector: '.isotope-item',
+        masonry: {
+            gutter: 1,
+            columnWidth: 20
+        }
 
+    });
 
 };
 

@@ -109,8 +109,8 @@ Template.CustomerNorthIndianBodyTemplate.rendered = function() {
         // set columnWidth a fraction of the container width
         itemSelector: '.isotope-item',
         masonry: {
-            gutter: 1
-            //columnWidth: 10
+            gutter: 1,
+            columnWidth: 20
         }
 
     });
