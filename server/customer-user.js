@@ -125,31 +125,7 @@ Meteor.methods({
 
 
 
-sendSms = function(phoneNumber,password){
 
-    twilio = Twilio("ACd9a8f0183a747cd753b1e3532581455d", "7f192048e68ed4cf0fe22ee63f2416a3");
-    twilio.sendSms({
-        to:'+91'+phoneNumber, // Any number Twilio can deliver to
-
-        from: '+12019031863', // A number you bought from Twilio and can use for outbound communication
-        body: 'Hi, Your password is  '+ password+"\nPlease use this to login.\nThanks for signing in for MyBiteFood.in .\nPlease consider changing your password" // body of the SMS message
-    }, function(err, responseData) {
-        if (err) {
-            console.log("Couldn't send the sms "+ err.message );
-            throw new Meteor.Error(err.message);
-            //return password;
-        }
-        else {
-            console.log('+91'+phoneNumber + " password :: "+password);
-            console.log(responseData.from); // outputs "+14506667788"
-            console.log(responseData.body); // outputs "word to your mother."
-
-
-        }
-
-
-    });
-};
 
 
 /*

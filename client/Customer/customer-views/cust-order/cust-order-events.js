@@ -55,13 +55,11 @@ Template.CustomerSubOrderBodyTemplate.events({
 Template.CustomerAllOrderBodyTemplate.events({
     'click #cancelOrder':function(e,templ){
         e.preventDefault();
-        if(window.confirm("Are you sure?")){
+   /*     if(window.confirm("Are you sure?")){
             var attr = {
                 _id:this._id,
                 userId:Meteor.userId()
             };
-
-
             if(Meteor.userId() && this.active == true){
                 Meteor.call('deleteOrder',attr,function(err,result){
                     if(err){
@@ -75,9 +73,45 @@ Template.CustomerAllOrderBodyTemplate.events({
             }else {
                 sweetAlert("Your order cannot be cancelled as it has already been delivered");
             }
-        }
+        }*/
 
-    }
+    var obj = this;
+
+        swal({
+            title: "Are you sure?",
+            text: "Do you want to cancel the order?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, Cancel it",
+            cancelButtonText: "No",
+            closeOnConfirm: true,
+            closeOnCancel: true
+        }, function(isConfirm) {
+            if (isConfirm) {
+                var attr = {
+                    _id:obj._id,
+                    userId:Meteor.userId()
+                };
+                if(Meteor.userId() && obj.active == true){
+
+                    Meteor.call('deleteOrder',attr,function(err,result){
+                        if(err){
+                            sweetAlert("Couldn't cancel the order");
+                        }
+                        else{
+                            sweetAlert("Your order has been cancelled");
+                            // Session.set("orderMessage","You have cancelled your order");
+                        }
+                    });
+                }
+            }
+        });
+
+
+
+
+}
 });
 
 

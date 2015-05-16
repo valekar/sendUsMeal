@@ -1,14 +1,16 @@
 <template name = "CustomerAllOrderBodyTemplate">
 <div class="container">
 	<div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-            <table class="table table-hover table-bordered">
+
+            <table class="table table-striped table-responsive">
                 <thead>
                 <tr>
                     <th>Ordered Items</th>
                     <th>user Details</th>
-                    <th>grand total</th>
-                    <th>created at</th>
+                    <th class="hidden-xs hidden-sm">grand total</th>
+                    <th class="hidden-xs hidden-sm">created at</th>
 					<th>Cancel?</th>
                 </tr>
                 </thead>
@@ -17,7 +19,8 @@
                 <tr>
                     <td>
 
-                        <table class="table table-bordered">
+                        <table class="table table-striped">
+
                             <thead class="text-center">
                             <tr>
                                 <th>Food</th>
@@ -48,22 +51,23 @@
 						<br>{{userDetails.companyName}},
 						<br> {{userDetails.companyLocation}},
 						<br> {{userDetails.userPhone}}
+                        <div class="hidden-lg hidden-md"><br> Ordered at  {{created_at}}</div>
 					</td>
-                    <td><i class="fa fa-rupee fa-1x"> </i> {{grandTotal}}</td>
-                    <td>{{created_at}}</td>
+                    <td class="hidden-sm hidden-xs"><i class="fa fa-rupee fa-1x"> </i> {{grandTotal}}</td>
+                    <td class="hidden-xs hidden-sm">{{created_at}}</td>
 
                     {{#if active}}
 					<td>
                         <button type="submit" class="btn btn-danger" id = "cancelOrder">Cancel</button>
 					</td>
                     {{else}}
-                       {{{orderMessage}}}
+                       N/A
                     {{/if}}
                 </tr>
 				{{/each}}
                 </tbody>
             </table>
-
+        </div>
 
 	</div>
 </div>

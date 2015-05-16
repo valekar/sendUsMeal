@@ -167,15 +167,24 @@
     padding: 4% 5%;
     padding-top: 1%;
     position: relative;
-    margin-bottom: -1.1%;
+    margin-bottom: -3.1%;
+
 /*background-image: url("bg_header.jpg") ;*/
 }
 
 .custom-header h1,h4{
     color: #ffffff;
     margin-top: -1%;
+    font-family: cursive;
 }
 
+.popover-content{
+    color: #244755;
+}
+
+.popover-title{
+    color: #244755;
+}
 
 .custom-lander-body{
    /* background-image: url("background.jpg");*/
@@ -280,10 +289,10 @@ body{
     z-index:10;
 }
 
-#myNavSpy.affix{
+#myScrollspy-sm.affix{
     position: fixed;
     top: 0px;
-    width: 17%;
+    width: 100%;
     z-index:10;
 
 
@@ -379,7 +388,7 @@ body{
 }
 
 .custom-arrow{
-    margin-top: 9%;
+    margin-top: 4%;
 }
 
 .custom-background{
@@ -435,5 +444,42 @@ sup {
 }
 
 .isotope-item.w2{
-    width:50%;
+    width:100%;
+}
+
+.isotope-button{
+    margin-bottom: 5%;
+}
+
+.isotope-button-sm{
+    margin-bottom: 2%;
+}
+
+/*Mobile*/
+
+.mobile-carousel-img{
+    height: 220px;
+    max-height: 220px;
+}
+
+.navbar-brand{
+    font-family: cursive;
+    font-size: 150%;
+    margin-left: -2%;
+}
+
+.mobile-ph{
+    font-size: 70%;
+}
+
+.mobile-carousel{
+    margin-bottom: -3%;
+    padding-top: 2%;
+
+}
+
+.mobile-what-we-do{
+    color: white;
+    padding-top: 3% ;
+    padding-bottom:1% ;
 }

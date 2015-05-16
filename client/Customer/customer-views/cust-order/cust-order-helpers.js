@@ -121,7 +121,20 @@ Template.CustomerOrderBodyTemplate.created=function(){
         if(!Meteor.userId()){
             Session.set('customerCurrentPage','CustomerLoginTemplate') ;
         }
+
+
+    /*desktop*/
+    $("#myScrollspy").affix({
+        offset: {
+            top: 200
+        }
+    });
+
+    var $affix = $("#myScrollspy"),
+        $parent = $affix.parent(),
+        resize = function() { $affix.width($parent.width()); };
+    $(window).resize(resize);
+    resize();
+
 };
-
-
 

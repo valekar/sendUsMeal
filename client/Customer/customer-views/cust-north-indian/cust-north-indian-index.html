@@ -1,7 +1,7 @@
 <template name = "CustomerNorthIndianBodyTemplate">
 
     <div class="container-fluid">
-        <div class="row">
+        <div class="row hidden-sm hidden-xs">
             <div class="col-md-3 col-lg-3">
                 <div class="panel panel-primary" data-spy="affix" id = "myScrollspy">
                     <div class="panel-heading">
@@ -51,6 +51,7 @@
 
             <div class=" col-md-9 col-lg-9">
                 <div id = "isotope-container">
+
                     {{#each northItemsFromRoute}}
                         <div class="isotope-item hidden-sm hidden-xs">
                             <div class="panel panel-default">
@@ -65,23 +66,87 @@
                                     </div>
                                 </div>
                                 <div class="panel-body">
-                                    <img src="/background.jpg" alt="alt-text" class="img-responsive"/>
+                                    <img src="{{url}}" alt="alt-text" class="img-responsive"/>
                                 </div>
-                                <div class="text-center hidden-xs hidden-sm">
+                                <div class="text-center hidden-xs hidden-sm isotope-button">
                                     <button class="btn btn-primary" id = "addNorthFood">Add</button>
                                     <button class="btn btn-danger " id = "removeNorthFood">Remove</button>
                                 </div>
 
-                                <div class="text-center hidden-lg hidden-md">
-                                    <button class="btn btn-primary btn-sm" id = "addNorthFood">Add</button>
-                                    <button class="btn btn-danger btn-sm" id = "removeNorthFood">Remove</button>
-                                </div>
+
 
                                 <!--End of panel-->
                             </div>
                         </div>
+                    {{/each}}
+                </div>
+
+            </div>
+        </div>
+        <!--row-->
 
 
+        <div class="row hidden-md hidden-lg">
+            <div class="row small">
+
+                    <div class="panel panel-primary" data-spy="affix" id = "myScrollspy-sm">
+                        <div class="panel-heading" data-toggle="collapse" href="#collapseOrder" aria-expanded="false" aria-controls="collapseOrder" title="Added An Order">
+                            <h3 class="panel-title " >Your Orders</h3>
+                           <div  id = "orderAlert"  data-placement="bottom" data-toggle="popover" data-trigger="focus"
+                                 title="Order Alert" data-content="Added an item to the cart."></div>
+                            <div class="text-right">
+                            {{#if showOrderButton}}
+                                        <button class="btn btn-primary" id = "orderFood">Order</button>
+                                        <button class="btn btn-danger" id = "clear">Clear Cart</button>
+                            {{/if}}
+                            </div>
+                        </div>
+                        <div class="panel-body collapse in" id ="collapseOrder">
+                            <table class="table table-hover table-bordered text-center">
+                                <thead>
+                                <tr>
+                                    <th>Food</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{#each itemList}}
+                                    <tr>
+                                        <td>{{itemName}}</td>
+                                        <td>{{itemQuantity}}</td>
+                                        <td>{{itemTotalPrice}}</td>
+                                    </tr>
+                                {{/each}}
+                                <tr>
+                                    <td colspan="3"></td>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2"><strong>Grand Total</strong> </td>
+                                    <td><i class="fa fa-rupee fa-2x"> </i> {{grandTotalAmount}}</td>
+                                </tr>
+
+                              <!--      <tr>
+                                        <td colspan="3" class="text-center">
+                                            <button class="btn btn-primary" id = "orderFood">Order</button>
+                                            <button class="btn btn-danger" id = "clear">Clear Cart</button>
+                                        </td>
+
+                                    </tr>-->
+
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+            </div>
+
+
+            <div class="row">
+                <div id = "isotope-container">
+                    {{#each northItemsFromRoute}}
                         <div class="isotope-item-sm hidden-lg hidden-md">
                             <div class="panel panel-default">
                                 <!--Start of panel-->
@@ -95,16 +160,11 @@
                                     </div>
                                 </div>
                                 <div class="panel-body">
-                                    <img src="/background.jpg" alt="alt-text" class="img-responsive"/>
+                                    <img src="{{url}}" alt="alt-text" class="img-responsive"/>
                                 </div>
-                                <div class="text-center hidden-xs hidden-sm">
+                                <div class="text-center hidden-lg hidden-md isotope-button-sm">
                                     <button class="btn btn-primary" id = "addNorthFood">Add</button>
                                     <button class="btn btn-danger " id = "removeNorthFood">Remove</button>
-                                </div>
-
-                                <div class="text-center hidden-lg hidden-md">
-                                    <button class="btn btn-primary btn-sm" id = "addNorthFood">Add</button>
-                                    <button class="btn btn-danger btn-sm" id = "removeNorthFood">Remove</button>
                                 </div>
 
                                 <!--End of panel-->
@@ -119,6 +179,9 @@
             </div>
         </div>
         <!--row-->
+
+
+
     </div>
     <!--container fluid-->
 

@@ -4,11 +4,17 @@ Template.CustomerNorthIndianBodyTemplate.events({
         // this is set in the rendered template (CustomerNorthIndianBodyTemplate)
         Session.set("item"+this._id+"Quantity",Session.get("item"+this._id+"Quantity")+1);
 
+        //only for mobile
+        $("#orderAlert").popover('show');
+
         var quantity = Session.get("item"+this._id+"Quantity");
         var object = this;
         //defined in the router waitOn method
         var currentSessionId = Session.get("currentSessionId");
         upsertIntoItemList(object,quantity,currentSessionId);
+        //only for mobile
+        callTimeOut();
+
     },
     'click #removeNorthFood':function(event,templ){
 
@@ -92,3 +98,9 @@ deleteFromItemList = function(object,currentSessionId){
     });
 
 };
+
+function callTimeOut(){
+    setTimeout(function(){
+        $("#orderAlert").popover('hide');
+    }, 700);
+}
