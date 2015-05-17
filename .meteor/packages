@@ -23,4 +23,6 @@ meteorhacks:fast-render
 gfk:mailgun-api
 cmather:handlebars-server
 meteorhacks:kadira
-isotope:isotope
+mrt:jquery-imagesloaded
+mrt:jquery-masonry
+sjors:meteor-masonry

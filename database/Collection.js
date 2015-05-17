@@ -29,7 +29,7 @@ Medias = new FS.Collection("medias", {
             transformWrite: function(fileObj, readStream, writeStream) {
                 // Transform the image into a 30x10px thumbnail
                 //gm(readStream, fileObj.name()).resize('200', '200').stream().pipe(writeStream);
-                gm(readStream).resize(550,350).stream('PNG').pipe(writeStream);
+                gm(readStream).resize(350,350).stream('PNG').pipe(writeStream);
             }
         }
     )],

@@ -52,7 +52,6 @@ iron:location@1.0.7
 iron:middleware-stack@1.0.7
 iron:router@1.0.7
 iron:url@1.0.7
-isotope:isotope@2.1.0_1
 jquery@1.11.3_2
 json@1.0.3
 kevohagan:sweetalert@0.5.0
@@ -74,6 +73,8 @@ mobile-status-bar@1.0.3
 momentjs:moment@2.10.3
 mongo@1.1.0
 mongo-livedata@1.0.8
+mrt:jquery-imagesloaded@0.0.2
+mrt:jquery-masonry@0.1.0
 multiply:iron-router-progress@1.0.1
 npm-bcrypt@0.7.8_2
 observe-sequence@1.0.6
@@ -88,6 +89,7 @@ routepolicy@1.0.5
 service-configuration@1.0.4
 session@1.1.0
 sha@1.0.3
+sjors:meteor-masonry@0.0.1
 spacebars@1.0.6
 spacebars-compiler@1.0.6
 spiderable@1.0.7

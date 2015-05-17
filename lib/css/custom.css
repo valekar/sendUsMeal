@@ -433,7 +433,7 @@ sup {
 }
 
 
-.isotope-item{
+.mason-item{
     width:25%;
     padding-bottom:1%;
 }
@@ -484,5 +484,9 @@ sup {
     padding-bottom:1% ;
 }
 
+
+#goToHome{
+    cursor: pointer;
+}
 
 

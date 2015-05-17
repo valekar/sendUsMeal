@@ -47,6 +47,6 @@ Template.CustomerHeaderTemplate.events({
         }
     },
     'click #goToHome':function(){
-
+        Router.go("/");
     }
 })

@@ -36,6 +36,7 @@ Template.CustomerHandPickedBodyTemplate.helpers({
 
 
 Template.CustomerHandPickedBodyTemplate.rendered = function() {
+
     /**
      *
      * this is used to remove & delete the items from the session cart
@@ -49,24 +50,54 @@ Template.CustomerHandPickedBodyTemplate.rendered = function() {
        // console.log("item"+items[i]._id+"Quantity");
     }
     /**
-     * this is used to affix the cart if the user scrolls down
+     * used to hide/show the Order button
      */
+    Session.set("NoOfItemListInCart",this.data.handPickedItemsFromRoute.length);
+    if(!Meteor.user() && Session.get("deliveredPlaces") != true){
+        //used to alert the user when he clicks on the north indian food items
+        $("#deliveredPlaces").modal('show');
+        Session.set("deliveredPlaces",true);
+    }
+    allJqueryFunctions();
+};
 
 
-    /*mobile*/
-    $("#myScrollspy-sm").affix({
-        offset: {
-            top: 200
-        }
+function allJqueryFunctions(){
 
+    var $container = $('#mason-container');
+    $container.imagesLoaded( function(){
+        $container.masonry({
+            itemSelector : '.mason-item',
+            columnWidth:100,
+            isAnimated: true,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            },
+            gutter: 10
+        });
     });
-    var $affix = $("#myScrollspy-sm"),
-        $parent = $affix.parent(),
 
-        resize = function() { $affix.width($parent.width());
-        };
-    $(window).resize(resize);
-    resize();
+
+    window.setTimeout(function() {
+        /*mobile*/
+        $("#myScrollspy-sm").affix({
+            offset: {
+                top: 200
+            }
+
+        });
+        var $affix = $("#myScrollspy-sm"),
+            $parent = $affix.parent(),
+
+            resize = function () {
+                $affix.width($parent.width());
+            };
+        $(window).resize(resize);
+        resize();
+    },100);
+
 
 
     $("#myScrollspy-sm").on("affixed.bs.affix",function(e){
@@ -76,12 +107,6 @@ Template.CustomerHandPickedBodyTemplate.rendered = function() {
     $("#myScrollspy-sm").on("affixed-top.bs.affix",function(e){
         $("#collapseOrder").collapse('show');
     });
-
-
-    /*mobile*/
-
-
-
 
     /*desktop*/
     $("#myScrollspy").affix({
@@ -99,47 +124,7 @@ Template.CustomerHandPickedBodyTemplate.rendered = function() {
 
     /*desktop*/
 
+}
 
-
-    /**
-     * used to hide/show the Order button
-     */
-    Session.set("NoOfItemListInCart",this.data.handPickedItemsFromRoute.length);
-    if(!Meteor.user() && Session.get("deliveredPlaces") != true){
-        //used to alert the user when he clicks on the north indian food items
-        $("#deliveredPlaces").modal('show');
-        Session.set("deliveredPlaces",true);
-    }
-
-    var $container = $('#isotope-container');
-    // init
-    $container.isotope({
-        // set columnWidth a fraction of the container width
-        itemSelector: '.isotope-item',
-        masonry: {
-            gutter: 1,
-            columnWidth: 20
-        }
-
-    });
-
-};
-
-/*$("#myNav ul li a[href^='#']").on('click', function(e) {
-
-    // prevent default anchor click behavior
-    e.preventDefault();
-
-    // animate
-    $('html, body').animate({
-        scrollTop: $(this.hash).offset().top
-    }, 300, function(){
-
-        // when done, add hash to url
-        // (default click behaviour)
-        window.location.hash = this.hash;
-    });
-
-});*/
 
 
