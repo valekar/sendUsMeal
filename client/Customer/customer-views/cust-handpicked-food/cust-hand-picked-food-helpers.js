@@ -68,7 +68,7 @@ function allJqueryFunctions(){
     $container.imagesLoaded( function(){
         $container.masonry({
             itemSelector : '.mason-item',
-            columnWidth:100,
+            columnWidth:50,
             isAnimated: true,
             animationOptions: {
                 duration: 750,

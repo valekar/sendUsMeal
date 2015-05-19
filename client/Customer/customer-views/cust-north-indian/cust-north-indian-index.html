@@ -6,6 +6,8 @@
                 <div class="panel panel-primary" data-spy="affix" id = "myScrollspy">
                     <div class="panel-heading">
                         <h3 class="panel-title text-center">Your Orders</h3>
+                        <div  id = "orderDesktopAlert"  data-placement="top" data-toggle="popover" data-trigger="focus"
+                              title="Order Changed!" data-content="You made a change to your cart."></div>
                     </div>
                     <div class="panel-body">
                         <table class="table table-hover table-bordered text-center">
@@ -90,10 +92,10 @@
             <div class="row small">
 
                     <div class="panel panel-primary" data-spy="affix" id = "myScrollspy-sm">
-                        <div class="panel-heading" data-toggle="collapse" href="#collapseOrder" aria-expanded="false" aria-controls="collapseOrder" title="Added An Order">
+                        <div class="panel-heading" data-toggle="collapse" href="#collapseOrder" aria-expanded="false" aria-controls="collapseOrder" title="Order Changed">
                             <h3 class="panel-title " >Your Orders</h3>
                            <div  id = "orderAlert"  data-placement="bottom" data-toggle="popover" data-trigger="focus"
-                                 title="Order Alert" data-content="Added an item to the cart."></div>
+                                 title="Order Changed!" data-content="You made a change to your cart."></div>
                             <div class="text-right">
                             {{#if showOrderButton}}
                                         <button class="btn btn-primary" id = "orderFood">Order</button>

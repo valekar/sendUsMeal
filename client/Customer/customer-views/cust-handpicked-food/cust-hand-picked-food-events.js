@@ -5,6 +5,7 @@ Template.CustomerHandPickedBodyTemplate.events({
         Session.set("item"+this._id+"Quantity",Session.get("item"+this._id+"Quantity")+1);
 
         $("#orderAlert").popover('show');
+        $("#orderDesktopAlert").popover('show');
 
 
         var quantity = Session.get("item"+this._id+"Quantity");
@@ -99,5 +100,6 @@ deleteFromItemList = function(object,currentSessionId){
 function callTimeOut(){
     setTimeout(function(){
         $("#orderAlert").popover('hide');
+        $("#orderDesktopAlert").popover('hide');
     }, 700);
 }

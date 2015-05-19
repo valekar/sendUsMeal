@@ -6,6 +6,7 @@ Template.CustomerNorthIndianBodyTemplate.events({
 
         //only for mobile
         $("#orderAlert").popover('show');
+        $("#orderDesktopAlert").popover('show');
 
         var quantity = Session.get("item"+this._id+"Quantity");
         var object = this;
@@ -102,5 +103,6 @@ deleteFromItemList = function(object,currentSessionId){
 function callTimeOut(){
     setTimeout(function(){
         $("#orderAlert").popover('hide');
+        $("#orderDesktopAlert").popover('hide');
     }, 700);
 }
