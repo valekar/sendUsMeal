@@ -26,7 +26,7 @@ Template.CustomerRegisterTemplate.events({
                     }
                     else{
                         //alert("signed in");
-                        sweetAlert("Signed In Successfully, Password has been sent to your mobile, Please Login using the same.");
+                        sweetAlert("Signed In Successfully, Password has been sent to your Email Id, Please Login using the same.");
                         //show the login template
                         Session.set('customerCurrentPage','CustomerLoginTemplate');
                         //$('#LoginModal').modal('hide');
@@ -64,7 +64,7 @@ Template.CustomerForgotPassword.events({
                 Session.set('customerCurrentPage','CustomerRegisterTemplate');
             }
             else{
-                sweetAlert("We have sent your password to your number");
+                sweetAlert("We have sent your password to your Email Id");
                 Session.set('customerCurrentPage','CustomerLoginTemplate');
                 //$('#LoginModal').modal('hide');
 
@@ -125,6 +125,7 @@ function getRegisterValues(){
     var personalName = getTextValues("regPersonalName"," Name");
     var phoneNumber = getTextValues("regPhoneNumber"," Phone Number");
     var email = getTextValues("regEmail"," Email");
+    var confirmEmail = getTextValues("regConfirmEmail","ConfirmEmail");
     console.log(phoneNumber);
     if(!phoneNumberValidation(phoneNumber)){
         sweetAlert("Please enter a valid phone number");
@@ -134,6 +135,13 @@ function getRegisterValues(){
 
    if(!emailValidation(email)){
        sweetAlert("Please enter a valid email Id");
+        return false;
+    }
+
+    if(confirmEmail !=email){
+        console.log(email)
+        console.log(confirmEmail)
+        sweetAlert("Email Ids do not match");
         return false;
     }
 

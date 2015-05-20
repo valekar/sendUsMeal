@@ -407,6 +407,13 @@ body{
     background-color: #555555;
 }
 
+.custom-get-started-button {
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: orangered;
+    font-size: 200%;
+}
+
 
 .custom-about-us{
     font-size: 150%;
