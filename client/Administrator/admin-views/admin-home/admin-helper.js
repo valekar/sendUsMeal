@@ -15,6 +15,20 @@ Template.AdminBodyLoginTemplate.helpers({
 Template.adminLoggedInTemplate.helpers({
     'currentShowingPageTemplate':function(){
         return Session.get("currentPage");
+    },
+    'NORTHADMIN':function(){
+        var adminType = Session.get("adminType");
+        if(adminType == 'NORTHADMIN'){
+            return adminType
+        }
+
+    },
+    'ADMIN':function(){
+        var adminType = Session.get("adminType");
+        if(adminType == 'ADMIN'){
+            return adminType
+        }
+
     }
 });
 
@@ -28,6 +42,8 @@ Template.adminLoggedInTemplate.rendered = function(){
         $(this).parent('li').addClass('active')
     });
 
-
+    var adminType = Session.get("adminType");
+   // console.log(adminType);
+   // Session.set("ADMINTYPE",adminType);
 
 }

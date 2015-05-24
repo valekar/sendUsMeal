@@ -3,13 +3,13 @@
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <title>
-        We Thank You for Joining mybitefood.in
+        We Thank You for Joining My Bite Food
     </title>
     <style type="text/css">
         a:hover { text-decoration: none !important; }
         .header h1 {color: #fff !important; font: normal 33px Georgia, serif; margin: 0; padding: 0; line-height: 33px;}
         .header p {color: #dfa575; font: normal 11px Georgia, serif; margin: 0; padding: 0; line-height: 11px; letter-spacing: 2px}
-        .content h2 {color:#8598a3 !important; font-weight: normal; margin: 0; padding: 0; font-style: italic; line-height: 30px; font-size: 30px;font-family: Georgia, serif; }
+        .content h2 {color:whitesmoke !important; font-weight: normal; margin: 0; padding: 0; font-style: italic; line-height: 30px; font-size: 30px;font-family: Georgia, serif; }
         .content p {color:#767676; font-weight: normal; margin: 0; padding: 0; line-height: 20px; font-size: 12px;font-family: Georgia, serif;}
         .content a {color: #d18648; text-decoration: none;}
         .footer p {padding: 0; font-size: 11px; color:#fff; margin: 0; font-family: Georgia, serif;}
@@ -22,9 +22,10 @@
         <td align="center" style="margin: 0; padding: 0; background:#244755;padding: 35px 0">
             <table cellpadding="0" cellspacing="0" border="0" align="center" width="650" style="font-family: Georgia, serif;" class="header">
                 <tr>
-                    <td bgcolor="#698291" height="115" align="center">
-                        <h1 style="color: #ffffff !important; font: normal 33px Georgia, serif; margin: 0; padding: 0; line-height: 33px;"><singleline label="Title">MyBiteFood.in</singleline></h1>
-                        <p style="color: #ffffff; font: normal 11px Georgia, serif; margin: 0; padding: 0; line-height: 11px;"><singleline label="Title">Make Your Own Combos</singleline></p>
+                    <td bgcolor="#1995dc" height="115" align="center">
+                        <!--<img src="data:image/jpg;base64,../public/logo.png" height="50px" width="50px">-->
+                        <h1 style="color: #ffffff !important; font: normal 33px Georgia cursive, serif; margin: 0; padding: 0; line-height: 33px;"><singleline label="Title">MyBiteFood.in</singleline></h1>
+                        <h4 style="color: #ffffff; font: normal 11px Georgia, serif; margin: 0; padding: 0; line-height: 11px;"><singleline label="Title">Make Your Own Combos</singleline></h4>
                     </td>
                 </tr>
                 <tr>
@@ -40,28 +41,12 @@
                             <repeater>
                                 <tr>
                                     <td valign="top" style="padding: 0; margin: 0">
-                                        <table cellpadding="0" cellspacing="0" border="0" style="color: #717171; font: normal 11px Georgia, serif; margin: 0; padding: 0;" width="620">
+                                        <table cellpadding="0" cellspacing="0" border="0" style="color: black; font: normal 11px cursive, serif; margin: 0; padding: 0;" width="620">
                                             <tr>
-                                                <td style="padding: 25px 0 0;" align="left">
-                                                    <h2 style="color:black !important; font-weight: normal; margin: 0; padding: 0; font-style: italic; line-height: 30px; font-size: 30px;font-family: Georgia, serif; "><singleline label="Title"><span style="{font-family:cursive;}">MyBiteFood.in</span></singleline></h2>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 15px 0 15px; border-bottom: 1px solid #d2b49b;" valign="top">
+                                                <td style="padding: 10px 0 10px; border-bottom: 1px solid #d2b49b;" valign="top">
 
-                                                    <p><multiline label="Description">
-                                                        <h3> Hi {{name}},</h3>
-                                                        <p style="{font-size: 15px;}">Your Password is <strong>{{password}}</strong>.</p>
-                                                        <p style="{font-size: 15px;}">You make your own combos of food and we deliver it to your office.</p>
-                                                        <br><br>
-                                                        <p style="{font-size: 15px;}">
-                                                            <strong>
-                                                                Note: We take orders between 9AM to 12 PM
-                                                            </strong>
-                                                        </p>
-                                                        <br>
-                                                        <p style="{font-size: 15px;}">Thanks & Regards,</p>
-                                                        <p style="{font-size: 15px;}">My Bite Food</p>
+                                                    <p style="font-size: 50px;"><multiline label="Description">
+                                                        {{{message}}}
                                                     </multiline></p>
                                                 </td>
                                             </tr>

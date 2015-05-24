@@ -497,3 +497,50 @@ sup {
 }
 
 
+#floating_link {
+    position: fixed;
+    right: 0;
+    top: 400px;
+    display: block;
+    width: 50px;
+    height: 125px;
+    text-indent: -10000px;
+    background-color: orangered;
+    overflow: hidden;
+}
+
+.floater-widget-tab {
+    margin-left: 91%;
+    position: fixed;
+    padding: 6px 10px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 34px;
+    font-weight: bold;
+    border-width: 2px;
+    border-style: solid;
+    display: block;
+    z-index: 100000;
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif; top: 237px;
+    background-color: orangered;
+    margin-top: 10%;
+}
+
+.floater-widget-tab a {
+    color: white;
+}
+
+.floater-widget-tab a:hover {
+    color: white;
+}
+.floater-left {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+

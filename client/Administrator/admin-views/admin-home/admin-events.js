@@ -55,6 +55,9 @@ Template.AdminBodyLoginTemplate.events({
         e.preventDefault();
         var username = $("#userName").val();
         var password = $("#userPassword").val();
+        var adminType = $('input:radio[name="adminType"]:checked').val();
+        Session.set("adminType",adminType);
+       // alert(adminType);
         Meteor.loginWithPassword({username:username}, password, function (err) {
             if (err) {
                 alert("Error :: " + err.reason);
@@ -76,6 +79,7 @@ Template.adminHeaderTemplate.events({
            if(err){
                alert("Couldn't logout");
            }else {
+               Session.clear();
                Router.go("/adminLogin.htm")
            }
        });
@@ -113,6 +117,10 @@ Template.adminLoggedInTemplate.events({
     'click #feedBacks':function(event,templ){
         event.preventDefault();
         Session.set("currentPage","AdminFeedBackTemplate");
+    },
+    'click #sendEmails':function(event,templ){
+        event.preventDefault();
+        Session.set("currentPage","AdminEmailTemplate");
     }
 
 });
