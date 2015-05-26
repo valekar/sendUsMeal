@@ -15,35 +15,36 @@ Template.AdminBodyLoginTemplate.helpers({
 Template.adminLoggedInTemplate.helpers({
     'currentShowingPageTemplate':function(){
         return Session.get("currentPage");
-    },
+    }/*,
     'NORTHADMIN':function(){
-        var adminType = Session.get("adminType");
+        var adminType = Session.get("ADMINTYPE");
         if(adminType == 'NORTHADMIN'){
             return adminType
         }
 
     },
     'ADMIN':function(){
-        var adminType = Session.get("adminType");
+        var adminType = Session.get("ADMINTYPE");
         if(adminType == 'ADMIN'){
             return adminType
         }
 
-    }
+    }*/
 });
 
 /*When the user logs into the system*/
 Template.adminLoggedInTemplate.rendered = function(){
     /*Autmatically show the Items page*/
+
+
+    var adminType = Session.get("adminType");
+   // console.log(adminType);
+    //Session.setPersistent("ADMINTYPE",adminType);
     $("#orders").trigger('click');
 
     $('ul.nav-pills li a').click(function (e) {
         $('ul.nav-pills li.active').removeClass('active')
         $(this).parent('li').addClass('active')
     });
-
-    var adminType = Session.get("adminType");
-   // console.log(adminType);
-   // Session.set("ADMINTYPE",adminType);
 
 }
